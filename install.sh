@@ -15,8 +15,6 @@ echo -e "${NC}    2. A working internet connection.\n\n"
 read -p "When you are ready just press enter:"
 
 # Basic setup
-termux-change-repo
-sleep 300
 termux-setup-storage
 sleep 2
 apt-get update
