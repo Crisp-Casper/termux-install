@@ -29,4 +29,5 @@ curl -L https://raw.githubusercontent.com/OzakIOne/termux-youtube-dl/v2.0.0/spon
 curl -L https://raw.githubusercontent.com/OzakIOne/termux-youtube-dl/v2.0.0/share2youtubedl.sh >"${TERMUXURLOPENER_CONFIG_FOLDER}/termux-url-opener"
 
 echo -e "${BLUE}Congratulations!!! Your setup is complete.\n\n"
+exit
 read -p "When you are ready just press enter"
