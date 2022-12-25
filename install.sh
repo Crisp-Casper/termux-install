@@ -3,7 +3,7 @@ set -euo pipefail
 
 BLUE='\e[34m'
 NC='\e[0m'
-YOUTUBEDL_OUTPUT_FOLDER="${HOME}/storage/shared/Youtube-DL"
+YOUTUBEDL_OUTPUT_FOLDER="${HOME}/storage/shared/Download"
 YOUTUBEDL_CONFIG_FOLDER="${HOME}/.config/yt-dlp/"
 TERMUXURLOPENER_CONFIG_FOLDER="${HOME}/bin/"
 
