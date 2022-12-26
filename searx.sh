@@ -27,4 +27,4 @@ command_not_found_handle() {
 fi
 clear
 python searx/searx/webapp.py
-exit"
+exit" > ../usr/etc/bash.bashrc
