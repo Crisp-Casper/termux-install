@@ -25,5 +25,6 @@ command_not_found_handle() {
 /data/data/com.termux/files/usr/libexec/termux/command-not-found "$1"
 }
 fi
+clear
 python searx/searx/webapp.py
-exit
+exit"
