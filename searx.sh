@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 git clone https://github.com/Crisp-Casper/searx.git
-pip install -r searx/requirments.txt
+pip install -r searx/requirements.txt
 echo "# Command history tweaks:
 # - Append history instead of overwriting
 #   when shell exits.
