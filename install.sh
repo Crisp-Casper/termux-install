@@ -17,8 +17,13 @@ read -p "When you are ready just press enter:"
 # Basic setup
 termux-setup-storage
 sleep 2
-pkg install libxslt git -y
-
+pkg install libxslt git ani-cli -y
+git clone https://github.com/pystardust/ani-cli.git
+cd ani-cli
+git checkout v4
+cp ani-cli /data/data/com.termux/files/usr/bin/ani-cli
+cd ..
+rm -rf ani-cli
 apt-get update
 apt-get -y install python ffmpeg
 pip install yt-dlp
