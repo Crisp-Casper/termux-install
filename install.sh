@@ -17,6 +17,8 @@ read -p "When you are ready just press enter:"
 # Basic setup
 termux-setup-storage
 sleep 2
+pkg install libxslt git -y
+
 apt-get update
 apt-get -y install python ffmpeg
 pip install yt-dlp
