@@ -36,4 +36,3 @@ curl -L https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/share
 
 echo -e "${BLUE}Congratulations!!! Your setup is complete.\n\n"
 exit
-read -p "When you are ready just press enter"
