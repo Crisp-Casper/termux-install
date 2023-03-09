@@ -25,7 +25,7 @@ cd ..
 rm -rf ani-cli
 apt-get update
 apt-get -y install python ffmpeg
-pip install yt-dlp spotdl setuptools
+pip install yt-dlp spotdl setuptools wheel
 mkdir -p $YOUTUBEDL_OUTPUT_FOLDER
 mkdir -p $YOUTUBEDL_CONFIG_FOLDER
 mkdir -p $TERMUXURLOPENER_CONFIG_FOLDER
