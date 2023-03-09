@@ -31,3 +31,4 @@ alias e=exit
 sleep 2
 python searx/searx/webapp.py
 exit" > ../usr/etc/bash.bashrc
+pip install pygments requests --upgrade
