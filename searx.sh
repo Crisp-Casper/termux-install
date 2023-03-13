@@ -28,6 +28,10 @@ fi
 clear
 alias c=clear
 alias e=exit
+alias upgrade='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash'
+alias update='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash'
+alias Upgrade='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash'
+alias Update='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash'
 sleep 2
 python searx/searx/webapp.py
 exit" > ../usr/etc/bash.bashrc
