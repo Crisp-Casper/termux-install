@@ -18,7 +18,7 @@ read -p "When you are ready just press enter:"
 termux-setup-storage
 sleep 2
 pkg install libxslt git ani-cli wget fzf aria2 python-pip -y
-git clone -b fuk_allanime https://github.com/pystardust/ani-cli.git
+git clone https://github.com/pystardust/ani-cli.git
 cd ani-cli
 cp ani-cli /data/data/com.termux/files/usr/bin/ani-cli
 cd ..
