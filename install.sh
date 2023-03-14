@@ -15,7 +15,7 @@ echo -e "${NC}    2. A working internet connection.\n\n"
 read -p "When you are ready just press enter:"
 
 # Basic setup
-curl -L https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/sources.list >"${PREFIX}/etc/apt/sources.list
+curl -L https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/sources.list >"${PREFIX}/etc/apt/sources.list"
 sleep 2
 pkg upgrade -y
 termux-setup-storage
