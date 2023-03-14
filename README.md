@@ -7,8 +7,11 @@ exit
 ```
 # This setup fetures the following:
 ```
+searx
+----------------------------
+ctrl+c to use other features
+----------------------------
 ani-cli
 spotdl
 yt-dlp
-searx
 ```
