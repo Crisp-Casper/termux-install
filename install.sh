@@ -15,9 +15,6 @@ echo -e "${NC}    2. A working internet connection.\n\n"
 read -p "When you are ready just press enter:"
 
 # Basic setup
-bash /data/data/com.termux/files/usr/bin/termux-change-repo
-sleep 2
-pkg upgrade
 termux-setup-storage
 sleep 2
 pkg install libxslt git ani-cli wget fzf aria2 python-pip -y
