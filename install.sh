@@ -15,6 +15,8 @@ echo -e "${NC}    2. A working internet connection.\n\n"
 read -p "When you are ready just press enter:"
 
 # Basic setup
+curl -L https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/sources.list >${PREFIX}/etc/apt/sources.list
+sleep 10
 termux-setup-storage
 sleep 2
 pkg install libxslt git ani-cli wget fzf aria2 python-pip -y
