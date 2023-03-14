@@ -17,6 +17,7 @@ read -p "When you are ready just press enter:"
 # Basic setup
 echo "# The main termux repository:
 deb https://packages.termux.org/apt/termux-main stable main" > ../usr/etc/apt/sources.list
+sleep 2
 pkg upgrade -y
 termux-setup-storage
 sleep 2
