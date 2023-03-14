@@ -1,4 +1,4 @@
-# just run this command for termux to be set up
+# just run this for termux to be set up
 ```sh
 termux-change-repo 
 pkg upgrade -y 
