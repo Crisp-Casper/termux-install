@@ -15,17 +15,15 @@ echo -e "${NC}    2. A working internet connection.\n\n"
 read -p "When you are ready just press enter:"
 
 # Basic setup
-pkg upgrade -y
 termux-setup-storage
 sleep 2
-pkg install libxslt git ani-cli wget fzf aria2 python-pip -y
+pkg upgrade -y
+pkg install python ffmpeg libxslt git ani-cli wget fzf aria2 python-pip -y
 git clone https://github.com/pystardust/ani-cli.git
 cd ani-cli
 cp ani-cli /data/data/com.termux/files/usr/bin/ani-cli
 cd ..
 rm -rf ani-cli
-apt-get update
-apt-get -y install python ffmpeg
 pip install yt-dlp spotdl setuptools wheel
 mkdir -p $YOUTUBEDL_OUTPUT_FOLDER
 mkdir -p $YOUTUBEDL_CONFIG_FOLDER
