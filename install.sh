@@ -19,7 +19,7 @@ curl -L https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/sourc
 sleep 10
 termux-setup-storage
 sleep 2
-pkg install libxslt git ani-cli wget fzf aria2 python-pip -y
+pkg install libxslt git ani-cli wget fzf aria2 python-pip openssl -y
 git clone https://github.com/pystardust/ani-cli.git
 cd ani-cli
 cp ani-cli /data/data/com.termux/files/usr/bin/ani-cli
