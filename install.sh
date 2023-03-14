@@ -16,7 +16,6 @@ read -p "When you are ready just press enter:"
 
 # Basic setup
 bash /data/data/com.termux/files/usr/bin/termux-change-repo
-curl -L https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/sources.list >"${PREFIX}/etc/apt/sources.list"
 sleep 2
 pkg upgrade
 termux-setup-storage
