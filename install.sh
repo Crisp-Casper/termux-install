@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#i can not belive how much i need to change in order for github to realize it!
 set -euo pipefail
 
 BLUE='\e[34m'
