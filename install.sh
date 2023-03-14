@@ -34,5 +34,6 @@ curl -L https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/.ytdl
 curl -L https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/sponsorblock.conf >"${YOUTUBEDL_CONFIG_FOLDER}/sponsorblock.conf"
 curl -L https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/share2youtubedl.sh >"${TERMUXURLOPENER_CONFIG_FOLDER}/termux-url-opener"
 
-echo -e "${BLUE}Congratulations!!! Your setup is complete.\n\n"
+echo -e "${BLUE}Congratulations!!! Your setup is complete. now onto searx!\n\n"
+curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/searx.sh | bash
 exit
