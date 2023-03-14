@@ -14,4 +14,5 @@ ctrl+c to use other features
 ani-cli
 spotdl
 yt-dlp
+genact
 ```
