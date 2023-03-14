@@ -12,6 +12,7 @@ echo "# Command history tweaks:
 shopt -s histappend
 shopt -s histverify
 export HISTCONTROL=ignoreboth
+export PATH=$PATH:~/.cargo/bin/
 
 # Default command line prompt.
 PROMPT_DIRTRIM=2
