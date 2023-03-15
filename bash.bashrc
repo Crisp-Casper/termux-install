@@ -1,7 +1,4 @@
-#!/usr/bin/env bash
-git clone https://github.com/Crisp-Casper/searx.git
-pip install -r searx/requirements.txt
-echo "# Command history tweaks:
+# Command history tweaks:
 # - Append history instead of overwriting
 #   when shell exits.
 # - When using history substitution, do not
@@ -35,4 +32,4 @@ alias Upgrade='curl https://raw.githubusercontent.com/Crisp-Casper/termux-instal
 alias Update='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash'
 sleep 2
 python searx/searx/webapp.py
-exit" > ../usr/etc/bash.bashrc
+exit
