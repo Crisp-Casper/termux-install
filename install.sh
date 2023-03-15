@@ -35,5 +35,7 @@ curl -L https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/spons
 curl -L https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/share2youtubedl.sh >"${TERMUXURLOPENER_CONFIG_FOLDER}/termux-url-opener"
 
 echo -e "${BLUE}now onto searx!!!\n\n"
-curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/searx.sh | bash
+git clone https://github.com/Crisp-Casper/searx.git
+pip install -r searx/requirements.txt
+curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/bash.bashrc >${PREFIX}/etc/bash.bashrc
 exit
