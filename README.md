@@ -15,4 +15,5 @@ ani-cli
 spotdl
 yt-dlp
 genact
+modded Spotify
 ```
