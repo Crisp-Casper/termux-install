@@ -15,5 +15,5 @@ ani-cli
 spotdl
 yt-dlp
 genact
-modded Spotify
+Modded Spotify (in default downloads folder on phone)
 ```
