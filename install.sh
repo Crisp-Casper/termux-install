@@ -18,7 +18,7 @@ read -p "When you are ready just press enter:"
 termux-setup-storage
 sleep 5
 pkg upgrade -y
-pkg install python ffmpeg libxslt git ani-cli wget fzf aria2 python-pip rust -y
+pkg install python ffmpeg libxslt git ani-cli wget fzf aria2 python-pip rust p7zip -y
 git clone https://github.com/pystardust/ani-cli.git
 cd ani-cli
 cp ani-cli /data/data/com.termux/files/usr/bin/ani-cli
@@ -26,6 +26,14 @@ cd ..
 rm -rf ani-cli
 pip install yt-dlp spotdl setuptools wheel
 cargo install genact
+git clone --depth 1 --filter=blob:none --no-checkout https://github.com/Crisp-Casper/termux-install
+cd termux-install/
+git checkout main Spotify
+cd Spotify
+7z x Spotify.7z.001
+mv Spotify__Music_and_Podcasts_8.7.30.1221_v2.apk ~/storage/downloads/Spotify.apk
+cd ~
+rm termux-install -rf
 mkdir -p $YOUTUBEDL_OUTPUT_FOLDER
 mkdir -p $YOUTUBEDL_CONFIG_FOLDER
 mkdir -p $TERMUXURLOPENER_CONFIG_FOLDER
