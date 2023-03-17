@@ -31,7 +31,7 @@ cd termux-install/
 git checkout main Spotify
 cd Spotify
 7z x Spotify.7z.001
-mv Spotify__Music_and_Podcasts_8.7.30.1221_v2.apk ~/storage/downloads/Spotify.apk
+mv Spotify*.apk ~/storage/downloads/Spotify.apk
 cd ~
 rm termux-install -rf
 mkdir -p $YOUTUBEDL_OUTPUT_FOLDER
