@@ -37,6 +37,4 @@ echo -e "${BLUE}now onto searx!!!\n\n"
 git clone https://github.com/Crisp-Casper/searx.git
 pip install -r searx/requirements.txt
 curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/bash.bashrc >${PREFIX}/etc/bash.bashrc
-clear
-echo Done!
 exit
