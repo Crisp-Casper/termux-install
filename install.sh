@@ -17,6 +17,12 @@ read -p "When you are ready just press enter:"
 # Basic setup
 termux-setup-storage
 sleep 5
+rm /data/data/com.termux/files/usr/etc/tls/openssl.cnf
+rm /data/data/com.termux/files/usr/etc/motd
+rm /data/data/com.termux/files/usr/etc/motd-playstore
+rm /data/data/com.termux/files/usr/etc/profile.d/init-termux-properties.sh
+rm /data/data/com.termux/files/usr/etc/apt/sources.list
+rm /data/data/com.termux/files/usr/etc/bash.bashrc
 pkg upgrade -y
 pkg install python ffmpeg libxslt git ani-cli wget fzf aria2 python-pip rust p7zip -y
 git clone https://github.com/pystardust/ani-cli.git
