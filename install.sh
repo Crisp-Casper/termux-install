@@ -7,17 +7,8 @@ YOUTUBEDL_OUTPUT_FOLDER="${HOME}/storage/shared/Youtube-DL"
 YOUTUBEDL_CONFIG_FOLDER="${HOME}/.config/yt-dlp/"
 TERMUXURLOPENER_CONFIG_FOLDER="${HOME}/bin/"
 
-echo "Hi, This script setup an environment to download various videos from various apps"
-sleep 1
-echo -e "\n\n${BLUE}Requirements :"
-echo -e "${NC}    1. Allow storage access to Termux"
-echo -e "${NC}    2. A working internet connection.\n\n"
-read -p "When you are ready just press enter:"
 
 # Basic setup
-termux-setup-storage
-sleep 5
-pkg update -y
 pkg install python ffmpeg libxslt git ani-cli wget fzf aria2 python-pip rust p7zip figlet -y
 git clone https://github.com/pystardust/ani-cli.git
 cd ani-cli
