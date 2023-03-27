@@ -26,10 +26,10 @@ fi
 clear
 alias c=clear
 alias e=exit
-alias upgrade='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash && bash ${PREFIX}/etc/bash.bashrc'
-alias update='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash && bash ${PREFIX}/etc/bash.bashrc'
-alias Upgrade='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash && bash ${PREFIX}/etc/bash.bashrc'
-alias Update='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash && bash ${PREFIX}/etc/bash.bashrc'
+alias upgrade='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash && yes | pkg update && bash ${PREFIX}/etc/bash.bashrc'
+alias update='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash && yes | pkg update && bash ${PREFIX}/etc/bash.bashrc'
+alias Upgrade='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash && yes | pkg update && bash ${PREFIX}/etc/bash.bashrc'
+alias Update='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash && yes | pkg update && bash ${PREFIX}/etc/bash.bashrc'
 alias work="sed -e 's/Youtube-DL/work/g' ~/.config/yt-dlp/config"
 figlet -w 50 -f script Browser Starting in 5
 sleep 1
