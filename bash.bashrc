@@ -32,18 +32,18 @@ alias Upgrade='curl https://raw.githubusercontent.com/Crisp-Casper/termux-instal
 alias Update='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash'
 alias work="sed -e 's/Youtube-DL/work/g' ~/.config/yt-dlp/config"
 figlet -f script Browser Starting in 5
-sleep 1
+sleep 2
 clear
 figlet -f script Browser Starting in 4
 clear
-sleep 1
+sleep 2
 figlet -f script Browser Starting in 3
 clear
-sleep 1
+sleep 2
 figlet -f script Browser Starting in 2
 clear
-sleep 1
+sleep 2
 figlet -f script Browser Starting in 1
-sleep 1
+sleep 2
 python searx/searx/webapp.py
 exit
