@@ -22,7 +22,7 @@ rm /data/data/com.termux/files/usr/etc/motd
 rm /data/data/com.termux/files/usr/etc/motd-playstore
 rm /data/data/com.termux/files/usr/etc/profile.d/init-termux-properties.sh
 rm /data/data/com.termux/files/usr/etc/bash.bashrc
-no | pkg upgrade -y
+pkg upgrade -y | yes
 pkg update -y
 pkg install python ffmpeg libxslt git ani-cli wget fzf aria2 python-pip rust p7zip figlet -y
 git clone https://github.com/pystardust/ani-cli.git
