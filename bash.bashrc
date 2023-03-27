@@ -31,13 +31,13 @@ alias update='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install
 alias Upgrade='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash && bash ${PREFIX}/etc/bash.bashrc'
 alias Update='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash && bash ${PREFIX}/etc/bash.bashrc'
 alias work="sed -e 's/Youtube-DL/work/g' ~/.config/yt-dlp/config"
-figlet -f script Browser Starting in 3
+figlet -w 50 -f script Browser Starting in 3
 sleep 3
 clear
-figlet -f script Browser Starting in 2
+figlet -w 50 -f script Browser Starting in 2
 sleep 3
 clear
-figlet -f script Browser Starting in 1
+figlet -w 50 -f script Browser Starting in 1
 sleep 3
 clear
 python searx/searx/webapp.py
