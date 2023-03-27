@@ -30,7 +30,7 @@ alias upgrade='curl https://raw.githubusercontent.com/Crisp-Casper/termux-instal
 alias update='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash'
 alias Upgrade='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash'
 alias Update='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash'
-alias work='sed -e 's/Youtube-DL/work/g' ~/.config/yt-dlp
+alias work="sed -e 's/Youtube-DL/work/g' ~/.config/yt-dlp"
 sleep 2
 python searx/searx/webapp.py
 exit
