@@ -18,7 +18,7 @@ read -p "When you are ready just press enter:"
 termux-setup-storage
 sleep 5
 pkg upgrade -y
-pkg install python ffmpeg libxslt git ani-cli wget fzf aria2 python-pip rust p7zip -y
+pkg install python ffmpeg libxslt git ani-cli wget fzf aria2 python-pip rust p7zip figlet -y
 git clone https://github.com/pystardust/ani-cli.git
 cd ani-cli
 cp ani-cli /data/data/com.termux/files/usr/bin/ani-cli
