@@ -23,10 +23,10 @@ pip install yt-dlp spotdl setuptools wheel
 cargo install genact
 git clone --depth 1 --filter=blob:none --no-checkout https://github.com/Crisp-Casper/termux-install
 cd termux-install/
-git checkout main Spotify
+git checkout main Spudify
 cd Spotify
-7z x Spotify.7z.001
-mv Spotify_*.apk ~/storage/downloads/Spotify.apk
+7z x Spudify.7z.001
+mv Spudify.apk ~/storage/downloads/Spudify.apk
 cd ~
 rm termux-install -rf
 sed -i 's/# shortcut/shortcut/g' ~/.termux/termux.properties
