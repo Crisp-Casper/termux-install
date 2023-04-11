@@ -25,7 +25,7 @@ git clone --depth 1 --filter=blob:none --no-checkout https://github.com/Crisp-Ca
 cd termux-install/
 git checkout main Spudify
 cd Spudify
-7z x Spudify.7z.001
+7z x Spudify.zip.001
 mv Spudify.apk ~/storage/downloads/Spudify.apk
 cd ~
 rm termux-install -rf
