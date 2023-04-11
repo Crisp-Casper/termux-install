@@ -3,8 +3,8 @@ git clone --depth 1 --filter=blob:none --no-checkout https://github.com/Crisp-Ca
 cd termux-install/
 git checkout main Spudify
 cd Spudify
-7z x Spotify__Music_and_Podcasts_8.7.30.1221_v2.zip.001
-mv Spotify__Music_and_Podcasts_8.7.30.1221_v2.apk ~/storage/downloads/Spotify.apk
+7z x Spotify.zip.001
+mv Spotify__Music_and_Podcasts_8.7.30.1221_v1.apk ~/storage/downloads/Spotify.apk
 cd ~
 rm termux-install -rf
 rm ${HOME}/searx -rf
