@@ -1,8 +1,8 @@
 # just run this for termux to be set up
 ```sh
+termux-change-repo
 termux-setup-storage
 sleep 5
-termux-change-repo
 curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/install.sh | bash 
 exit
 ```
