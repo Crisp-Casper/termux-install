@@ -24,7 +24,7 @@ cargo install genact
 git clone --depth 1 --filter=blob:none --no-checkout https://github.com/Crisp-Casper/termux-install
 cd termux-install/
 git checkout main Spudify
-cd Spotify
+cd Spudify
 7z x Spudify.7z.001
 mv Spudify.apk ~/storage/downloads/Spudify.apk
 cd ~
