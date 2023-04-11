@@ -5,6 +5,8 @@ git checkout main Spudify
 cd Spudify
 7z x Spotify__Music_and_Podcasts_8.7.30.1221_v2.zip.001
 mv Spotify__Music_and_Podcasts_8.7.30.1221_v2.apk ~/storage/downloads/Spotify.apk
+cd ~
+rm termux-install -rf
 rm ${HOME}/searx -rf
 rm ~/termux-install -rf
 curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/install.sh | bash
