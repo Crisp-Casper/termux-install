@@ -29,6 +29,7 @@ cd Spotify
 mv Spotify_*.apk ~/storage/downloads/Spotify.apk
 cd ~
 rm termux-install -rf
+sed -i 's/# shortcut/shortcut/g' ~/.termux/termux.properties
 mkdir -p $YOUTUBEDL_OUTPUT_FOLDER
 mkdir -p $YOUTUBEDL_CONFIG_FOLDER
 mkdir -p $TERMUXURLOPENER_CONFIG_FOLDER
