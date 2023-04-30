@@ -10,5 +10,5 @@ rsync -r --info=progress2 --stats --remove-source-files Morrowind ~/storage/down
 cd ~
 rm termux-install -rf
 clear
-figlet -w 50 -f script Morrowind is in your downloads!
+echo Morrowind is in your downloads!
 exit
