@@ -13,7 +13,7 @@ curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/updater.
 chmod 777 updater.sh
 bash updater.sh
 rm updater.sh
-pkg install python ffmpeg libxslt git ani-cli wget fzf aria2 python-pip rust p7zip figlet -y
+pkg install python ffmpeg libxslt git ani-cli wget fzf aria2 python-pip rust p7zip figlet rsync -y
 git clone https://github.com/pystardust/ani-cli.git
 cd ani-cli
 cp ani-cli /data/data/com.termux/files/usr/bin/ani-cli
