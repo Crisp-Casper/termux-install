@@ -5,10 +5,11 @@ git checkout main Morrowind
 cd Morrowind
 7z x Open_Morrowind.zip.001
 7z x Morrowind.zip.001
-rsync -r --info=progress2 --stats --remove-source-files Open_Morrowind.apk ~/storage/downloads/Open_Morrowind.apk
-rsync -r --info=progress2 --stats --remove-source-files Morrowind ~/storage/downloads/
+mkdir ~/storage/shared/omw
+rsync -r --info=progress2 --stats --remove-source-files Open_Morrowind.apk ~/storage/shared/omw/Open_Morrowind.apk
+rsync -r --info=progress2 --stats --remove-source-files Morrowind ~/storage/shared/omw/
 cd ~
 rm termux-install -rf
 clear
-echo Morrowind is in your downloads!
+echo Morrowind is in a folder called omw!
 exit
