@@ -3,6 +3,7 @@ clear
 echo "This will take a bit..."
 sleep 5
 git clone --depth 1 --filter=blob:none --no-checkout https://github.com/Crisp-Casper/termux-install
+clear
 cd termux-install/
 git checkout main Morrowind
 cd Morrowind
