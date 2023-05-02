@@ -19,7 +19,7 @@ genact (pretend to be a hacker!)
 Music Player Spudify* (in default downloads folder on phone)
 ```
 # Info for *
-## Spotify playlist
+## Spotify music/playlist
 ### Links to music must be formated correctly!
 > https://open.spotify.com/playlist/1zA5D0MShD37rDB2oX68Ud?si=c0f5ff4325af4aab
 ### Is IMPROPER!
