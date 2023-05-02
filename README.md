@@ -1,3 +1,4 @@
+![IM TRYING!!!](/assets/images/program.gif)
 # just run this for termux to be set up
 ```sh
 termux-change-repo
