@@ -12,9 +12,18 @@ searx
 ----------------------------
 ctrl+c to use other features
 ----------------------------
-ani-cli
-spotdl
-yt-dlp
-genact
-Modded Spotify (in default downloads folder on phone)
+ani-cli (Watch anime through superior methods!)
+spotdl (Download Spotify music/playlist*)
+yt-dlp (Share Directly to termux or use this command to download video from almost any websight!)
+genact (pretend to be a hacker!)
+Music Player Spudify* (in default downloads folder on phone)
 ```
+# Info for *
+## Spotify playlist
+### Links to music must be formated correctly!
+> https://open.spotify.com/playlist/1zA5D0MShD37rDB2oX68Ud?si=c0f5ff4325af4aab
+### Is IMPROPER!
+> https://open.spotify.com/playlist/1zA5D0MShD37rDB2oX68Ud
+### Would be CORRECT
+## Spudify
+### Spudify is a modified version of spotify featuring the spud himself!
