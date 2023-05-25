@@ -1,4 +1,6 @@
 ![IM TRYING!!!](/assets/images/program.gif)
+# Download
+https://f-droid.org/repo/com.termux_118.apk
 # just run this for termux to be set up
 ```sh
 termux-change-repo
