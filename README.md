@@ -19,6 +19,7 @@ ani-cli (Watch anime through superior methods!)
 spotdl (Download Spotify music/playlist*)
 yt-dlp (Share Directly to termux or use this command to download video from almost any websight!)
 genact (pretend to be a hacker!)
+espeak (Become Stephen Hawking)
 Music Player Spudify* (in default downloads folder on phone)
 Morrowind (use mw for modded morrowind and dmw for default morrowind)
 ```
