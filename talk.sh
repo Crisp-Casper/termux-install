@@ -24,6 +24,6 @@ do
 		;;
         *) echo "invalid option $REPLY";;
     esac
-    sed -i 's/volume-keys/# volume-keys/g' ~/.termux/termux.properties
-    termux-reload-settings
 done
+sed -i 's/volume-keys/# volume-keys/g' ~/.termux/termux.properties
+termux-reload-settings
