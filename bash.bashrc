@@ -39,8 +39,9 @@ alias DMW='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/ma
 alias Dmw='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/DMW/Morrowind.sh | bash'
 alias work="sed -i 's/Youtube-DL/work/g' ~/.config/yt-dlp/config"
 alias og="sed -i 's/work/Youtube-DL/g' ~/.config/yt-dlp/config"
-alias talk="espeak -s 125"
-alias yell="espeak -s 125 -a 200"
+alias espeak="bash ~/talk.sh"
+alias talk="bash ~/talk.sh"
+alias yell="bash ~/talk.sh"
 figlet -w 50 -f script Browser Starting in 5
 sleep 1
 clear
