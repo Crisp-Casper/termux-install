@@ -37,6 +37,8 @@ mkdir -p $TERMUXURLOPENER_CONFIG_FOLDER
 curl -L https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/.ytdl.conf >"${YOUTUBEDL_CONFIG_FOLDER}/config"
 curl -L https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/sponsorblock.conf >"${YOUTUBEDL_CONFIG_FOLDER}/sponsorblock.conf"
 curl -L https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/share2youtubedl.sh >"${TERMUXURLOPENER_CONFIG_FOLDER}/termux-url-opener"
+curl -L https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/talk.sh > ~/talk.sh
+chmod 777 ~/talk.sh
 
 echo -e "${BLUE}now onto searx!!!\n\n"
 git clone https://github.com/Crisp-Casper/searx.git
