@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 sed -i 's/# volume/volume/g' ~/.termux/termux.properties
+termux-reload-settings
 PS3='Please enter your choice: 1.Talk 2.Yell 3:Quit   '
 options=("Talk" "Yell" "Quit")
 select opt in "${options[@]}"
@@ -24,4 +25,5 @@ do
         *) echo "invalid option $REPLY";;
     esac
     sed -i 's/volume/# volume/g' ~/.termux/termux.properties
+    termux-reload-settings
 done
