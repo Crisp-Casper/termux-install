@@ -20,9 +20,9 @@ cp ani-cli /data/data/com.termux/files/usr/bin/ani-cli
 cd ..
 rm -rf ani-cli
 pip install yt-dlp spotdl setuptools wheel
-git clone https://github.com/svenstaro/genact.git
-cd genact
-cargo run --release
+
+
+
 git clone https://github.com/svenstaro/genact.git
 cd genact
 cargo install --path ./
