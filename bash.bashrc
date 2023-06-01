@@ -26,10 +26,10 @@ fi
 clear
 alias c=clear
 alias e=exit
-alias upgrade='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash && yes | pkg update && clear && exit
-alias update='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash && yes | pkg update && clear && exit
-alias Upgrade='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash && yes | pkg update && clear && exit
-alias Update='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash && yes | pkg update && clear && exit
+alias upgrade='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash && yes | pkg update && clear && exit'
+alias update='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash && yes | pkg update && clear && exit'
+alias Upgrade='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash && yes | pkg update && clear && exit'
+alias Update='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash && yes | pkg update && clear && exit'
 
 alias Morrowind='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Morrowind/Morrowind.sh | bash'
 alias morrowind='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Morrowind/Morrowind.sh | bash'
