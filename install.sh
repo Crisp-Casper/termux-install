@@ -13,16 +13,13 @@ curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/updater.
 chmod 777 updater.sh
 bash updater.sh
 rm updater.sh
-pkg install python ffmpeg libxslt git ani-cli wget fzf aria2 python-pip rust p7zip figlet espeak rsync -y
+pkg install python ffmpeg libxslt git ani-cli wget fzf aria2 python-pip rust p7zip figlet espeak rsync tty-clock -y
 git clone https://github.com/pystardust/ani-cli.git
 cd ani-cli
 cp ani-cli /data/data/com.termux/files/usr/bin/ani-cli
 cd ..
 rm -rf ani-cli
 pip install yt-dlp spotdl setuptools wheel
-
-
-
 git clone https://github.com/svenstaro/genact.git
 cd genact
 cargo install --path ./
@@ -46,8 +43,7 @@ curl -L https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/spons
 curl -L https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/share2youtubedl.sh >"${TERMUXURLOPENER_CONFIG_FOLDER}/termux-url-opener"
 curl -L https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/talk.sh > ~/talk.sh
 chmod 777 ~/talk.sh
-
-echo -e "${BLUE}now onto searx!!!\n\n"
+echo -e "${BLUE}"
 git clone https://github.com/Crisp-Casper/searx.git
 pip install -r searx/requirements.txt
 curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/bash.bashrc >${PREFIX}/etc/bash.bashrc
