@@ -30,7 +30,9 @@ alias upgrade='curl https://raw.githubusercontent.com/Crisp-Casper/termux-instal
 alias update='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash && yes | pkg update && clear && exit'
 alias Upgrade='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash && yes | pkg update && clear && exit'
 alias Update='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash && yes | pkg update && clear && exit'
-
+alias tty-clock='tty-clock -cstC 6'
+alias time='tty-clock -cstC 6'
+alias clock='tty-clock -cstC 6'
 alias Morrowind='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Morrowind/Morrowind.sh | bash'
 alias morrowind='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Morrowind/Morrowind.sh | bash'
 alias omw='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Morrowind/Morrowind.sh | bash'
