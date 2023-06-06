@@ -80,7 +80,7 @@ echo $MENU
 							rm $HOME/.local/state/ani-cli -rf
 							;;
 						"Main Menu")
-							#break
+							break
 							;;
 
 						esac
