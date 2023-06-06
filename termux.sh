@@ -21,12 +21,6 @@ echo $MENU
 		case $opt in
 			"Searx")
 				clear
-				figlet -w 50 -f script Browser Starting in 5
-				sleep 1
-				clear
-				figlet -w 50 -f script Browser Starting in 4
-				sleep 1
-				clear
 				figlet -w 50 -f script Browser Starting in 3
 				sleep 1
 				clear
@@ -43,12 +37,14 @@ echo $MENU
 				if test -f $PREFIX/bin/ani-cli ; then
 				echo "ani-cli installed"
 				else
+				cd $HOME
 				git clone https://github.com/pystardust/ani-cli.git
 				cd ani-cli
 				cp ani-cli $PREFIX/bin/ani-cli
 				cd $HOME
 				rm -rf ani-cli
 				fi
+				clear
 				echo $MENU
 				avar=("Sub" "Dub")
 					select lang in "${avar[@]}" ; do
@@ -63,8 +59,9 @@ echo $MENU
 								;;
 							esac
 						done
+						clear
 						echo $MENU
-						bvar=("New Anime" "History" "Download" "Download From History" "Delete History" "Main Menu")
+						bvar=("New Anime" "History" "Download" "Download From History" "Delete History" "Update" "Main Menu")
 				select watch in "${bvar[@]}" ; do
 					case $watch in
 						"New Anime")
@@ -88,6 +85,13 @@ echo $MENU
 							clear
 							rm $HOME/.local/state/ani-cli -rf
 							;;
+						"Update")
+							rm $PREFIX/bin/ani-cli -rf
+							git clone https://github.com/pystardust/ani-cli.git
+							cd ani-cli
+							cp ani-cli $PREFIX/bin/ani-cli
+							cd $HOME
+							rm -rf ani-cli
 						"Main Menu")
 							break
 							;;
