@@ -132,7 +132,7 @@ echo $MENU
 				fi ;;
 			"Espeak")
 				clear
-				sed -i 's/#volume-keys/volume-keys/g' $HOME/.termux/termux.properties
+				sed -i 's/# volume-keys/volume-keys/g' $HOME/.termux/termux.properties
 				termux-reload-settings
 				echo $MENU
 				options=("Talk" "Yell" "Quit")
