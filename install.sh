@@ -9,6 +9,8 @@ TERMUXURLOPENER_CONFIG_FOLDER="${HOME}/bin/"
 
 
 # Basic setup
+curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/termux.sh > termux.sh
+chmod 777 termux.sh
 curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/updater.sh > updater.sh
 chmod 777 updater.sh
 bash updater.sh
