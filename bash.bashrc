@@ -26,39 +26,7 @@ fi
 clear
 alias c=clear
 alias e=exit
-alias upgrade='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash && yes | pkg update && clear && exit'
-alias update='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash && yes | pkg update && clear && exit'
-alias Upgrade='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash && yes | pkg update && clear && exit'
-alias Update='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash && yes | pkg update && clear && exit'
-alias tty-clock='tty-clock -cstC 6'
-alias time='tty-clock -cstC 6'
-alias clock='tty-clock -cstC 6'
-alias Morrowind='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Morrowind/Morrowind.sh | bash'
-alias morrowind='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Morrowind/Morrowind.sh | bash'
-alias omw='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Morrowind/Morrowind.sh | bash'
-alias mw='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Morrowind/Morrowind.sh | bash'
-alias dmw='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/DMW/Morrowind.sh | bash'
-alias DMW='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/DMW/Morrowind.sh | bash'
-alias Dmw='curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/DMW/Morrowind.sh | bash'
 alias work="sed -i 's/Youtube-DL/work/g' ~/.config/yt-dlp/config"
 alias og="sed -i 's/work/Youtube-DL/g' ~/.config/yt-dlp/config"
-alias espeak="bash ~/talk.sh"
-alias talk="bash ~/talk.sh"
-alias yell="bash ~/talk.sh"
-figlet -w 50 -f script Browser Starting in 5
-sleep 1
-clear
-figlet -w 50 -f script Browser Starting in 4
-sleep 1
-clear
-figlet -w 50 -f script Browser Starting in 3
-sleep 1
-clear
-figlet -w 50 -f script Browser Starting in 2
-sleep 1
-clear
-figlet -w 50 -f script Browser Starting in 1
-sleep 1
-clear
-python searx/searx/webapp.py
+bash $HOME/termux.sh
 exit
