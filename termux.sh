@@ -167,6 +167,7 @@ echo $MENU
 						"Quit")
 							clear
 							break
+							echo Main Menu
 							;;
 					esac
 				done
@@ -175,9 +176,12 @@ echo $MENU
 				termux-reload-settings
 				;;
 			"TTY-Clock")
+				clear
 				tty-clock -cstC 6
 				;;
 			"Download Center")
+				clear
+				echo $MENU
 				cvar=("Spudify" "Morrowind" "Back")
 				select down in "${cvar[@]}" ; do
 					case $down in
@@ -190,6 +194,9 @@ echo $MENU
 							mv Spudify.apk $HOME/storage/downloads/Spudify.apk
 							cd $HOME
 							rm termux-install -rf
+							clear
+							break
+							echo Main Menu
 							;;
 						"Morrowind")
 							clear
@@ -237,11 +244,13 @@ echo $MENU
 										;;
 									"Back")
 										break
+										echo Download Center Menu
 										;;
 								esac
 							done ;;
 						"Back")
 							break
+							echo Main Menu
 							;;
 
 					esac
