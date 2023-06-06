@@ -235,6 +235,7 @@ echo $MENU
 				done ;;
 			"Update")
 				curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash
+				exit
 				;;
 			"EXIT")
 				exit
