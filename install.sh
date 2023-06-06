@@ -20,19 +20,6 @@ cp ani-cli /data/data/com.termux/files/usr/bin/ani-cli
 cd ..
 rm -rf ani-cli
 pip install yt-dlp spotdl setuptools wheel
-git clone https://github.com/svenstaro/genact.git
-cd genact
-cargo install --path ./
-cd ..
-rm genact -rf
-git clone --depth 1 --filter=blob:none --no-checkout https://github.com/Crisp-Casper/termux-install
-cd termux-install/
-git checkout main Spudify
-cd Spudify
-7z x Spudify.zip.001
-mv Spudify.apk ~/storage/downloads/Spudify.apk
-cd ~
-rm termux-install -rf
 sed -i 's/# shortcut/shortcut/g' ~/.termux/termux.properties
 mkdir -p $YOUTUBEDL_OUTPUT_FOLDER
 mkdir -p $YOUTUBEDL_CONFIG_FOLDER
