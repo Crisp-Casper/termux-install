@@ -15,7 +15,7 @@ the Enter key to display the available command list."
 
 MENU='Please enter your choice:		'
 
-var=("Searx" "Anime" "Spotdl" "yt-dlp" "Genact" "Espeak" "TTY-Clock" "Download Center" "EXIT")
+var=("Searx" "Anime" "Spotdl" "yt-dlp" "Genact" "Espeak" "TTY-Clock" "Download Center" "Update" "EXIT")
 echo $MENU
 	select opt in "${var[@]}" ; do
 		case $opt in
