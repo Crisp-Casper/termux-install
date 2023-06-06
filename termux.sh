@@ -92,6 +92,7 @@ echo $MENU
 							cp ani-cli $PREFIX/bin/ani-cli
 							cd $HOME
 							rm -rf ani-cli
+							;;
 						"Main Menu")
 							break
 							;;
