@@ -16,11 +16,6 @@ chmod 777 updater.sh
 bash updater.sh
 rm updater.sh
 pkg install python ffmpeg libxslt git wget fzf aria2 python-pip rust p7zip figlet espeak rsync tty-clock -y
-#git clone https://github.com/pystardust/ani-cli.git
-#cd ani-cli
-#cp ani-cli /data/data/com.termux/files/usr/bin/ani-cli
-#cd ..
-#rm -rf ani-cli
 pip install yt-dlp spotdl setuptools wheel
 sed -i 's/# shortcut/shortcut/g' ~/.termux/termux.properties
 mkdir -p $YOUTUBEDL_OUTPUT_FOLDER
