@@ -40,6 +40,15 @@ echo $MENU
 				;;
 			"Anime")
 				clear
+				if test -f $PREFIX/bin/ani-cli ; then
+				echo "ani-cli installed"
+				else
+				git clone https://github.com/pystardust/ani-cli.git
+				cd ani-cli
+				cp ani-cli $PREFIX/bin/ani-cli
+				cd $HOME
+				rm -rf ani-cli
+				fi
 				echo $MENU
 				avar=("Sub" "Dub")
 					select lang in "${avar[@]}" ; do
@@ -115,7 +124,7 @@ echo $MENU
 				;;
 			"Genact")
 				clear
-				if true -f $HOME/.cargo/gin/genact ; then
+				if test -f $HOME/.cargo/gin/genact ; then
 					genact
 					clear
 					echo Main Menu
