@@ -78,12 +78,14 @@ echo $MENU
 							read anime
 							ani-cli $dub $anime
 							clear
+							echo "Anime Menu"
 							;;
 						"History")
 							clear
 							echo "One moment please..."
 							ani-cli -c $dub
 							clear
+							echo "Anime Menu"
 							;;
 						"Download")
 							clear
@@ -92,6 +94,7 @@ echo $MENU
 							ani-cli -d $dub $anime
 							mv *.mp4 $HOME/storage/shared/Youtube-DL/
 							clear
+							echo "Anime Menu"
 							;;
 						"Download From History")
 							clear
@@ -99,11 +102,13 @@ echo $MENU
 							ani-cli -d -c $dub
 							mv *.mp4 $HOME/storage/shared/Youtube-DL/
 							clear
+							echo "Anime Menu"
 							;;
 						"Delete History")
 							clear
 							rm $HOME/.local/state/ani-cli -rf
 							clear
+							echo "Anime Menu"
 							;;
 						"Update")
 							rm $PREFIX/bin/ani-cli -rf
@@ -113,6 +118,7 @@ echo $MENU
 							cd $HOME
 							rm -rf ani-cli
 							clear
+							echo "Anime Menu"
 							;;
 						"Main Menu")
 							break
@@ -202,6 +208,7 @@ echo $MENU
 			"TTY-Clock")
 				clear
 				tty-clock -cstC 6
+				echo Main Menu
 				;;
 			"Download Center")
 				clear
@@ -245,7 +252,8 @@ echo $MENU
 										rm termux-install -rf
 										clear
 										echo "Morrowind is in a folder called omw on your phone"
-										echo Main Menu
+										break
+										echo Download Center Menu
 										;;
 									"Without Mods")
 										clear
@@ -264,7 +272,8 @@ echo $MENU
 										rm termux-install -rf
 										clear
 										echo "Morrowind is in a folder called omw on your phone"
-										echo Main Menu
+										break
+										echo Download Center Menu
 										;;
 									"Back")
 										break
