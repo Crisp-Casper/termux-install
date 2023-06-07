@@ -26,7 +26,5 @@ curl -L https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/.ytdl
 curl -L https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/sponsorblock.conf >"${YOUTUBEDL_CONFIG_FOLDER}/sponsorblock.conf"
 curl -L https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/share2youtubedl.sh >"${TERMUXURLOPENER_CONFIG_FOLDER}/termux-url-opener"
 echo -e "${BLUE}"
-git clone https://github.com/Crisp-Casper/searx.git
-pip install -r searx/requirements.txt
 curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/bash.bashrc >${PREFIX}/etc/bash.bashrc
 exit
