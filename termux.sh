@@ -136,8 +136,8 @@ echo $MENU
 				echo "Name the playlist folder"
 				read dir
 				clear
-				mkdir $dir
-				cd $dir
+				mkdir "$dir"
+				cd "$dir"
 				echo "Now paste your spotify link"
 				read spotify
 				spotdl $spotify | sed 's/?si.*//g'
