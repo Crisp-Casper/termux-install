@@ -66,20 +66,30 @@ echo $MENU
 					case $watch in
 						"New Anime")
 							clear
+							echo "Enter Anime Name:	"
 							read anime
 							ani-cli $dub $anime
 							;;
 						"History")
 							clear
+							echo "One moment please..."
 							ani-cli -c $dub
+							clear
 							;;
 						"Download")
 							clear
-							ani-cli -d $dub
+							echo "Enter Anime Name:	"
+							read anime
+							ani-cli -d $dub $anime
+							mv *.mp4 $HOME/storage/shared/Youtube-DL/
+							clear
 							;;
 						"Download From History")
 							clear
+							echo "One moment please..."
 							ani-cli -d -c $dub
+							mv *.mp4 $HOME/storage/shared/Youtube-DL/
+							clear
 							;;
 						"Delete History")
 							clear
@@ -95,6 +105,8 @@ echo $MENU
 							;;
 						"Main Menu")
 							break
+							clear
+							echo Main Menu
 							;;
 
 						esac
