@@ -129,7 +129,7 @@ echo $MENU
 				;;
 			"Genact")
 				clear
-				if test -f $HOME/.cargo/gin/genact ; then
+				if test -f $HOME/.cargo/bin/genact ; then
 					genact
 					clear
 					echo Main Menu
