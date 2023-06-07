@@ -21,6 +21,14 @@ echo $MENU
 		case $opt in
 			"Searx")
 				clear
+				if test -f $HOME/searx/searx/webapp.py ; then
+				echo "Searx is installed"
+				clear
+				else
+				git clone https://github.com/Crisp-Casper/searx.git
+				pip install -r searx/requirements.txt
+				fi
+				clear
 				figlet -w 50 -f script Browser Starting in 3
 				sleep 1
 				clear
