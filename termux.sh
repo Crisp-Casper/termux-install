@@ -69,6 +69,7 @@ echo $MENU
 							echo "Enter Anime Name:	"
 							read anime
 							ani-cli $dub $anime
+							clear
 							;;
 						"History")
 							clear
@@ -94,6 +95,7 @@ echo $MENU
 						"Delete History")
 							clear
 							rm $HOME/.local/state/ani-cli -rf
+							clear
 							;;
 						"Update")
 							rm $PREFIX/bin/ani-cli -rf
@@ -102,6 +104,7 @@ echo $MENU
 							cp ani-cli $PREFIX/bin/ani-cli
 							cd $HOME
 							rm -rf ani-cli
+							clear
 							;;
 						"Main Menu")
 							break
