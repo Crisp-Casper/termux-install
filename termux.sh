@@ -196,8 +196,8 @@ echo $MENU
 							;;
 						"Quit")
 							clear
-							break
 							echo Main Menu
+							break
 							;;
 					esac
 				done
@@ -226,8 +226,8 @@ echo $MENU
 							cd $HOME
 							rm termux-install -rf
 							clear
-							break
 							echo Main Menu
+							break
 							;;
 						"Morrowind")
 							clear
@@ -252,8 +252,8 @@ echo $MENU
 										rm termux-install -rf
 										clear
 										echo "Morrowind is in a folder called omw on your phone"
-										break
 										echo Download Center Menu
+										break
 										;;
 									"Without Mods")
 										clear
@@ -272,18 +272,18 @@ echo $MENU
 										rm termux-install -rf
 										clear
 										echo "Morrowind is in a folder called omw on your phone"
-										break
 										echo Download Center Menu
+										break
 										;;
 									"Back")
-										break
 										echo Download Center Menu
+										break
 										;;
 								esac
 							done ;;
 						"Back")
-							break
 							echo Main Menu
+							break
 							;;
 
 					esac
