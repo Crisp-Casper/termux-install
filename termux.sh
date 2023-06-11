@@ -215,7 +215,6 @@ echo -e "${cyan}$MENU${green}"
 							;;
 						"Quit")
 							clear
-							echo Main Menu
 							break
 							;;
 					esac
@@ -223,6 +222,7 @@ echo -e "${cyan}$MENU${green}"
 				sed -i 's/volume-keys/# volume-keys/g' $HOME/.termux/termux.properties
 
 				termux-reload-settings
+				echo -e "${magenta}Main Menu"
 				;;
 			"TTY-Clock")
 				clear
