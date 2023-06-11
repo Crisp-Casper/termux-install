@@ -11,6 +11,8 @@ exit
 ```
 # This setup fetures the following:
 ```
+Colored GUI for the following:
+
 searx (Web Engine)
 ani-cli (Watch anime through superior methods!)
 spotdl (Download Spotify music/playlist)
@@ -18,6 +20,9 @@ yt-dlp (Share Directly to termux or use this command to download video from almo
 genact (pretend to be a hacker!)
 espeak (Become Stephen Hawking)
 tty-clock (better clock <3)
+Pac-Man (myman the Pac-Man clone)
+
+Download Center:
 Music Player Spudify*
 Morrowind
 ```
