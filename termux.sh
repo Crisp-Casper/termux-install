@@ -180,7 +180,7 @@ echo -e "${cyan}$MENU${green}"
 					echo -e "${white}"
 					genact
 					clear
-					echo -e "${magenta}Main Menu"
+					echo -e "${green}Main Menu"
 				else
 					git clone https://github.com/svenstaro/genact.git
 					cd genact
@@ -190,7 +190,7 @@ echo -e "${cyan}$MENU${green}"
 					clear
 					genact
 					clear
-					echo -e "${magenta}Main Menu"
+					echo -e "${green}Main Menu"
 				fi ;;
 			"Espeak")
 				clear
