@@ -285,7 +285,7 @@ echo -e "${cyan}$MENU${green}"
 										rm termux-install -rf
 										clear
 										echo -e "${yellow}Morrowind is in a folder called omw on your phone"
-										echo -e "${green}Games/Applications Menu"
+										echo -e "${red}Games/Applications Menu"
 										break
 										;;
 									"Without Mods")
@@ -305,11 +305,11 @@ echo -e "${cyan}$MENU${green}"
 										rm termux-install -rf
 										clear
 										echo -e "${yellow}Morrowind is in a folder called omw on your phone"
-										echo -e "${green}Games/Applications Menu"
+										echo -e "${red}Games/Applications Menu"
 										break
 										;;
 									"Back")
-										echo -e "${green}Games/Applications Menu"
+										echo -e "${red}Games/Applications Menu"
 										break
 										;;
 								esac
