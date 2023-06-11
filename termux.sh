@@ -222,7 +222,7 @@ echo -e "${cyan}$MENU${green}"
 				sed -i 's/volume-keys/# volume-keys/g' $HOME/.termux/termux.properties
 
 				termux-reload-settings
-				echo -e "${magenta}Main Menu"
+				echo -e "${green}Main Menu"
 				;;
 			"TTY-Clock")
 				clear
