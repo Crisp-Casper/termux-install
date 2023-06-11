@@ -20,9 +20,9 @@ yt-dlp (Share Directly to termux or use this command to download video from almo
 genact (pretend to be a hacker!)
 espeak (Become Stephen Hawking)
 tty-clock (better clock <3)
-Pac-Man (myman the Pac-Man clone)
 
-Download Center:
-Music Player Spudify*
+Games/Applications:
+Music Player Spudify
+Pac-Man (myman the Pac-Man clone)
 Morrowind
 ```
