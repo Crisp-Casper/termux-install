@@ -253,11 +253,13 @@ echo -e "${cyan}$MENU${green}"
 							if test -f $PREFIX/bin/myman ; then
 								echo -e "${white}"
 								myman
+								echo -e "${green}"
 							else
 								pkg install myman -y
 								clear
 								echo -e "${white}"
 								myman
+								echo -e "${green}"
 							fi
 							;;
 						"Morrowind")
