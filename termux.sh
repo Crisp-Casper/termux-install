@@ -168,7 +168,7 @@ echo -e "${cyan}$MENU${green}"
 				;;
 			"yt-dlp")
 				clear
-				echo -e "${yellow}Paste the link to the websight containing a video file"
+				echo -e "${yellow}Paste the link to the websight containing a video file${white}"
 				read yt
 				yt-dlp $yt
 				clear
@@ -177,6 +177,7 @@ echo -e "${cyan}$MENU${green}"
 			"Genact")
 				clear
 				if test -f $HOME/.cargo/bin/genact ; then
+					echo -e "${white}"
 					genact
 					clear
 					echo "${magenta}Main Menu"
