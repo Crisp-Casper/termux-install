@@ -231,7 +231,7 @@ echo -e "${cyan}$MENU${green}"
 				;;
 			"Games/Applications")
 				clear
-				echo -e "${cyan}$MENU${green}"
+				echo -e "${cyan}$MENU${red}"
 				cvar=("Spudify" "Pac-Man" "Morrowind" "Back")
 				select down in "${cvar[@]}" ; do
 					case $down in
