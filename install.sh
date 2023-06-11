@@ -15,7 +15,7 @@ curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/updater.
 chmod 777 updater.sh
 bash updater.sh
 rm updater.sh
-pkg install python ffmpeg libxslt git wget fzf aria2 python-pip rust p7zip figlet espeak rsync tty-clock -y
+pkg install python ffmpeg libxslt git wget fzf aria2 python-pip rust p7zip figlet espeak rsync tty-clock myman -y
 pip install yt-dlp spotdl setuptools wheel
 sed -i 's/# shortcut/shortcut/g' ~/.termux/termux.properties
 mkdir -p $YOUTUBEDL_OUTPUT_FOLDER
