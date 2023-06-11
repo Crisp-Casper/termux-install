@@ -1,13 +1,25 @@
 #!/bin/bash
 
 	while true ; do
+#############
+### Color ###
+#############
+
+black='\x1b[30m'
+red='\x1b[31m'
+green='\x1b[32m'
+yellow='\x1b[33m'
+blue='\x1b[34m'
+magenta='\x1b[35m'
+cyan='\x1b[36m'
+white='\x1b[37m'
 
 ############
 ### Note ###
 ############
 
-echo "Keep in mind that at any point, you may press
-the Enter key to display the available command list."
+echo -e "${yellow}Keep in mind that at any point, you may press
+the Enter key to display the available command list.${white}"
 
 ############
 ### Menu ###
@@ -16,7 +28,7 @@ the Enter key to display the available command list."
 MENU='Please enter your choice:		'
 
 var=("Searx" "Anime" "Spotdl" "yt-dlp" "Genact" "Espeak" "TTY-Clock" "Download Center" "Update" "EXIT")
-echo $MENU
+echo -e "${cyan}$MENU${green}"
 	select opt in "${var[@]}" ; do
 		case $opt in
 			"Searx")
@@ -29,12 +41,15 @@ echo $MENU
 				pip install -r searx/requirements.txt
 				fi
 				clear
+				echo -e "${red}"
 				figlet -w 50 -f script Browser Starting in 3
 				sleep 1
 				clear
+				echo -e "${yellow}"
 				figlet -w 50 -f script Browser Starting in 2
 				sleep 1
 				clear
+				echo -e "${green}"
 				figlet -w 50 -f script Browser Starting in 1
 				sleep 1
 				clear
@@ -53,7 +68,7 @@ echo $MENU
 				rm -rf ani-cli
 				fi
 				clear
-				echo $MENU
+				echo -e "${cyan}$MENU${magenta}"
 				avar=("Sub" "Dub")
 					select lang in "${avar[@]}" ; do
 						case $lang in
@@ -68,17 +83,17 @@ echo $MENU
 							esac
 						done
 						clear
-						echo $MENU
+						echo -e "${cyan}$MENU${magenta}"
 						bvar=("New Anime" "History" "Download" "Download From History" "Delete History" "Update" "Main Menu")
 				select watch in "${bvar[@]}" ; do
 					case $watch in
 						"New Anime")
 							clear
-							echo "Enter Anime Name:	"
+							echo -e "${cyan}Enter Anime Name:	${white}"
 							read anime
 							ani-cli $dub $anime
 							clear
-							echo "Anime Menu"
+							echo -e "${magenta}Anime Menu"
 							;;
 						"History")
 							clear
