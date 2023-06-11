@@ -54,6 +54,7 @@ echo -e "${cyan}$MENU${green}"
 				sleep 1
 				clear
 				python searx/searx/webapp.py
+				echo -e "${green}"
 				;;
 			"Anime")
 				clear
@@ -97,35 +98,35 @@ echo -e "${cyan}$MENU${green}"
 							;;
 						"History")
 							clear
-							echo "One moment please..."
+							echo -e "${green}One moment please..."
 							ani-cli -c $dub
 							clear
-							echo "Anime Menu"
+							echo -e "${magenta}Anime Menu"
 							;;
 						"Download")
 							clear
-							echo "Enter Anime Name:	"
+							echo -e "${cyan}Enter Anime Name:	${white}"
 							read anime
 							clear
-							echo "One moment please..."
+							echo -e "${green}One moment please..."
 							ani-cli -d $dub $anime
 							mv *.mp4 $HOME/storage/shared/Youtube-DL/
 							clear
-							echo "Anime Menu"
+							echo -e "${magenta}Anime Menu"
 							;;
 						"Download From History")
 							clear
-							echo "One moment please..."
+							echo -e "${green}One moment please..."
 							ani-cli -d -c $dub
 							mv *.mp4 $HOME/storage/shared/Youtube-DL/
 							clear
-							echo "Anime Menu"
+							echo -e "${magenta}Anime Menu"
 							;;
 						"Delete History")
 							clear
 							rm $HOME/.local/state/ani-cli -rf
 							clear
-							echo "Anime Menu"
+							echo -e "${magenta}Anime Menu"
 							;;
 						"Update")
 							rm $PREFIX/bin/ani-cli -rf
@@ -139,7 +140,7 @@ echo -e "${cyan}$MENU${green}"
 							;;
 						"Main Menu")
 							clear
-							echo Main Menu
+							echo -e "{$green}Main Menu"
 							break
 							;;
 
@@ -150,12 +151,12 @@ echo -e "${cyan}$MENU${green}"
 				rm $HOME/Music -rf
 				mkdir $HOME/Music
 				cd $HOME/Music
-				echo "Name the playlist folder"
+				echo -e "${green}Name the playlist folder"
 				read dir
 				clear
 				mkdir "$dir"
 				cd "$dir"
-				echo "Now paste your spotify link"
+				echo -e "${green}Now paste your spotify link"
 				read spotify
 				spotdl $spotify | sed 's/?si.*//g'
 				cd $HOME/Music
@@ -163,22 +164,22 @@ echo -e "${cyan}$MENU${green}"
 				cd $HOME/
 				rm $HOME/Music -rf
 				clear
-				echo Main Menu
+				echo -e "${green}Main Menu"
 				;;
 			"yt-dlp")
 				clear
-				echo "Paste the link to the websight containing a video file"
+				echo -e "${yellow}Paste the link to the websight containing a video file"
 				read yt
 				yt-dlp $yt
 				clear
-				echo Main Menu
+				echo -e "${green}Main Menu"
 				;;
 			"Genact")
 				clear
 				if test -f $HOME/.cargo/bin/genact ; then
 					genact
 					clear
-					echo Main Menu
+					echo "${magenta}Main Menu"
 				else
 					git clone https://github.com/svenstaro/genact.git
 					cd genact
@@ -188,13 +189,13 @@ echo -e "${cyan}$MENU${green}"
 					clear
 					genact
 					clear
-					echo Main Menu
+					echo "${magenta}Main Menu"
 				fi ;;
 			"Espeak")
 				clear
 				sed -i 's/# volume-keys/volume-keys/g' $HOME/.termux/termux.properties
 				termux-reload-settings
-				echo $MENU
+				echo -e "${cyan}$MENU${yellow}"
 				options=("Talk" "Yell" "Quit")
 				select opt in "${options[@]}" ; do
 					case $opt in
@@ -225,11 +226,11 @@ echo -e "${cyan}$MENU${green}"
 			"TTY-Clock")
 				clear
 				tty-clock -cstC 6
-				echo Main Menu
+				echo -e "${green}Main Menu"
 				;;
 			"Download Center")
 				clear
-				echo $MENU
+				echo -e "${cyan}$MENU${green}"
 				cvar=("Spudify" "Morrowind" "Back")
 				select down in "${cvar[@]}" ; do
 					case $down in
@@ -243,18 +244,18 @@ echo -e "${cyan}$MENU${green}"
 							cd $HOME
 							rm termux-install -rf
 							clear
-							echo Main Menu
+							echo -e "${magenta}Main Menu"
 							break
 							;;
 						"Morrowind")
 							clear
-							echo $MENU
+							echo -e "${cyan}$MENU${green}"
 							dvar=("With Mods" "Without Mods" "Back")
 							select mw in "${dvar[@]}" ; do
 								case $mw in
 									"With Mods")
 										clear
-										echo "This will take a momment please be patient..."
+										echo -e "${yellow}This will take a momment please be patient...${green}"
 										sleep 5
 										git clone --depth 1 --filter=blob:none --no-checkout https://github.com/Crisp-Casper/termux-install
 										cd termux-install
@@ -268,13 +269,13 @@ echo -e "${cyan}$MENU${green}"
 										cd $HOME
 										rm termux-install -rf
 										clear
-										echo "Morrowind is in a folder called omw on your phone"
-										echo Download Center Menu
+										echo -e "${yellow}Morrowind is in a folder called omw on your phone"
+										echo -e "${green}Download Center Menu"
 										break
 										;;
 									"Without Mods")
 										clear
-										echo "This will take a momment please be patient..."
+										echo -e "${yellow}This will take a momment please be patient...${green}"
 										sleep 5
 										git clone --depth 1 --filter=blob:none --no-checkout https://github.com/Crisp-Casper/termux-install
 										cd termux-install
@@ -288,18 +289,18 @@ echo -e "${cyan}$MENU${green}"
 										cd $HOME
 										rm termux-install -rf
 										clear
-										echo "Morrowind is in a folder called omw on your phone"
-										echo Download Center Menu
+										echo -e "${yellow}Morrowind is in a folder called omw on your phone"
+										echo -e "${green}Download Center Menu"
 										break
 										;;
 									"Back")
-										echo Download Center Menu
+										echo -e "${green}Download Center Menu"
 										break
 										;;
 								esac
 							done ;;
 						"Back")
-							echo Main Menu
+							echo -e "${green}Main Menu"
 							break
 							;;
 
