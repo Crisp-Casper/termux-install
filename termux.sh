@@ -245,7 +245,7 @@ echo -e "${cyan}$MENU${green}"
 							cd $HOME
 							rm termux-install -rf
 							clear
-							echo -e "${magenta}Main Menu"
+							echo -e "${green}Main Menu"
 							break
 							;;
 						"Morrowind")
