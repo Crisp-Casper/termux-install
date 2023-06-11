@@ -91,6 +91,8 @@ echo $MENU
 							clear
 							echo "Enter Anime Name:	"
 							read anime
+							clear
+							echo "One moment please..."
 							ani-cli -d $dub $anime
 							mv *.mp4 $HOME/storage/shared/Youtube-DL/
 							clear
@@ -121,9 +123,9 @@ echo $MENU
 							echo "Anime Menu"
 							;;
 						"Main Menu")
-							break
 							clear
 							echo Main Menu
+							break
 							;;
 
 						esac
