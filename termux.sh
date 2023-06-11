@@ -27,7 +27,7 @@ the Enter key to display the available command list.${white}"
 
 MENU='Please enter your choice:		'
 
-var=("Searx" "Anime" "Spotdl" "yt-dlp" "Genact" "Espeak" "TTY-Clock" "Download Center" "Update" "EXIT")
+var=("Searx" "Anime" "Spotdl" "yt-dlp" "Genact" "Espeak" "TTY-Clock" "Pac-Man" "Download Center" "Update" "EXIT")
 echo -e "${cyan}$MENU${green}"
 	select opt in "${var[@]}" ; do
 		case $opt in
@@ -228,6 +228,12 @@ echo -e "${cyan}$MENU${green}"
 				clear
 				tty-clock -cstC 6
 				echo -e "${green}Main Menu"
+				;;
+			"Pac-Man")
+				echo -e "${white}"
+				myman
+				clear
+				echo -e "${green}"
 				;;
 			"Download Center")
 				clear
