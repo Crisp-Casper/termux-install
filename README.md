@@ -26,6 +26,3 @@ Download Center:
 Music Player Spudify*
 Morrowind
 ```
-# Info for *
-## Spudify
-### Spudify is a modified version of spotify featuring the spud himself!
