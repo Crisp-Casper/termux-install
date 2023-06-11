@@ -27,7 +27,7 @@ the Enter key to display the available command list.${white}"
 
 MENU='Please enter your choice:		'
 
-var=("Searx" "Anime" "Spotdl" "yt-dlp" "Genact" "Espeak" "TTY-Clock" "Pac-Man" "Download Center" "Update" "EXIT")
+var=("Searx" "Anime" "Spotdl" "yt-dlp" "Genact" "Espeak" "TTY-Clock" "Games/Applications" "Update" "EXIT")
 echo -e "${cyan}$MENU${green}"
 	select opt in "${var[@]}" ; do
 		case $opt in
@@ -229,16 +229,10 @@ echo -e "${cyan}$MENU${green}"
 				tty-clock -cstC 6
 				echo -e "${green}Main Menu"
 				;;
-			"Pac-Man")
-				echo -e "${white}"
-				myman
-				clear
-				echo -e "${green}"
-				;;
-			"Download Center")
+			"Games/Applications")
 				clear
 				echo -e "${cyan}$MENU${green}"
-				cvar=("Spudify" "Morrowind" "Back")
+				cvar=("Spudify" "Pac-Man" "Morrowind" "Back")
 				select down in "${cvar[@]}" ; do
 					case $down in
 						"Spudify")
@@ -253,6 +247,18 @@ echo -e "${cyan}$MENU${green}"
 							clear
 							echo -e "${green}Main Menu"
 							break
+							;;
+						"Pac-Man")
+							clear
+							if test -f $PREFIX/bin/myman ; then
+								echo -e "${white}"
+								myman
+							else
+								pkg install myman -y
+								clear
+								echo -e "${white}"
+								myman
+							fi
 							;;
 						"Morrowind")
 							clear
@@ -277,7 +283,7 @@ echo -e "${cyan}$MENU${green}"
 										rm termux-install -rf
 										clear
 										echo -e "${yellow}Morrowind is in a folder called omw on your phone"
-										echo -e "${green}Download Center Menu"
+										echo -e "${green}Games/Applications Menu"
 										break
 										;;
 									"Without Mods")
@@ -297,11 +303,11 @@ echo -e "${cyan}$MENU${green}"
 										rm termux-install -rf
 										clear
 										echo -e "${yellow}Morrowind is in a folder called omw on your phone"
-										echo -e "${green}Download Center Menu"
+										echo -e "${green}Games/Applications Menu"
 										break
 										;;
 									"Back")
-										echo -e "${green}Download Center Menu"
+										echo -e "${green}Games/Applications Menu"
 										break
 										;;
 								esac
