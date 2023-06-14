@@ -160,7 +160,7 @@ echo -e "${cyan}$MENU${green}"
 				read spotify
 				spotdl $spotify | sed 's/?si.*//g'
 				cd $HOME/Music
-				rsync -r --info=progress2 --stats --remove-source-files $dir $HOME/storage/music
+				rsync -r --info=progress2 --stats --remove-source-files "$dir" $HOME/storage/music
 				cd $HOME/
 				rm $HOME/Music -rf
 				clear
