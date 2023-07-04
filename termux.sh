@@ -64,7 +64,7 @@ echo -e "${cyan}$MENU${green}"
 				cd $HOME
 				git clone -b hex_decryption https://github.com/pystardust/ani-cli.git
 				cd ani-cli
-				cp ani-cli $PREFIX/bin/ani-cli
+				cp ./ani-cli $PREFIX/bin/ani-cli
 				cd $HOME
 				rm -rf ani-cli
 				fi
@@ -132,7 +132,7 @@ echo -e "${cyan}$MENU${green}"
 							rm $PREFIX/bin/ani-cli -rf
 							git clone -b hex_decryption https://github.com/pystardust/ani-cli.git
 							cd ani-cli
-							cp ani-cli $PREFIX/bin/ani-cli
+							cp ./ani-cli $PREFIX/bin/ani-cli
 							cd $HOME
 							rm -rf ani-cli
 							clear
