@@ -61,12 +61,7 @@ echo -e "${cyan}$MENU${green}"
 				if test -f $PREFIX/bin/ani-cli ; then
 				echo "ani-cli installed"
 				else
-				cd $HOME
-				git clone -b hex_decryption https://github.com/pystardust/ani-cli.git
-				cd ani-cli
-				cp ./ani-cli $PREFIX/bin/ani-cli
-				cd $HOME
-				rm -rf ani-cli
+				curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/ani-cli.sh | bash
 				fi
 				clear
 				echo -e "${cyan}$MENU${magenta}"
@@ -130,11 +125,7 @@ echo -e "${cyan}$MENU${green}"
 							;;
 						"Update")
 							rm $PREFIX/bin/ani-cli -rf
-							git clone -b hex_decryption https://github.com/pystardust/ani-cli.git
-							cd ani-cli
-							cp ./ani-cli $PREFIX/bin/ani-cli
-							cd $HOME
-							rm -rf ani-cli
+							curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/ani-cli.sh | bash
 							clear
 							echo "Anime Menu"
 							;;
