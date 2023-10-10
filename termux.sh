@@ -223,7 +223,7 @@ echo -e "${cyan}$MENU${green}"
 			"Games/Applications")
 				clear
 				echo -e "${cyan}$MENU${red}"
-				cvar=("Spudify" "Pac-Man" "Morrowind" "Back")
+				cvar=("Spudify" "Lucky-Patcher" "Pac-Man" "Morrowind" "Back")
 				select down in "${cvar[@]}" ; do
 					case $down in
 						"Spudify")
@@ -233,6 +233,18 @@ echo -e "${cyan}$MENU${green}"
 							cd Spudify
 							7z x Spudify.zip.001
 							mv Spudify.apk $HOME/storage/downloads/Spudify.apk
+							cd $HOME
+							rm termux-install -rf
+							clear
+							echo -e "${green}Main Menu"
+							break
+							;;
+       						"Lucky-Patcher")
+	     						git clone --depth 1 --filter=blob:none --no-checkout https://github.com/Crisp-Casper/termux-install
+							cd termux-install/
+							git checkout main Lucky-Patcher
+							cd Lucky-Patcher
+							mv LP_Downloader.apk $HOME/storage/downloads/Lucky-Patcher.apk
 							cd $HOME
 							rm termux-install -rf
 							clear
