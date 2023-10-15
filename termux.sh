@@ -191,6 +191,12 @@ echo -e "${cyan}$MENU${green}"
 				fi ;;
 			"Espeak")
 				clear
+				if test -f $PREFIX/bin/espeak ; then
+				echo "espeak installed"
+				else
+				pip install espeak
+				fi
+				clear
 				sed -i 's/# volume-keys/volume-keys/g' $HOME/.termux/termux.properties
 				termux-reload-settings
 				echo -e "${cyan}$MENU${yellow}"
@@ -222,6 +228,12 @@ echo -e "${cyan}$MENU${green}"
 				echo -e "${green}Main Menu"
 				;;
 			"TTY-Clock")
+				clear
+				if test -f $PREFIX/bin/tty-clock ; then
+				echo "tty-clock installed"
+				else
+				pkg install tty-clock
+				fi
 				clear
 				tty-clock -cstC 6
 				echo -e "${green}Main Menu"
