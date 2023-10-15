@@ -62,6 +62,7 @@ echo -e "${cyan}$MENU${green}"
 				echo "ani-cli installed"
 				else
 				curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/ani-cli.sh | bash
+				pkg install fzf aria2
 				fi
 				clear
 				echo -e "${cyan}$MENU${magenta}"
@@ -143,7 +144,7 @@ echo -e "${cyan}$MENU${green}"
 				echo "ytfzf installed"
 				else
 				pkg install ytfzf
-				mkdir ytfzf
+				mkdir .config/ytfzf
 				curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/ytfzf > .config/ytfzf/conf.sh
 				fi
 				clear
@@ -153,6 +154,7 @@ echo -e "${cyan}$MENU${green}"
 				if test -f $PREFIX/bin/spotdl ; then
 				echo "spotdl installed"
 				else
+				pkg install binutils
 				pip install spotdl
 				fi
 				clear
@@ -190,6 +192,7 @@ echo -e "${cyan}$MENU${green}"
 					clear
 					echo -e "${green}Main Menu"
 				else
+					pkg install rust
 					git clone https://github.com/svenstaro/genact.git
 					cd genact
 					cargo install --path ./
@@ -252,7 +255,7 @@ echo -e "${cyan}$MENU${green}"
 			"Games/Applications")
 				clear
 				echo -e "${cyan}$MENU${red}"
-				cvar=("Spudify" "nds4droid" "Lucky-Patcher" "Pac-Man" "Morrowind" "Back")
+				cvar=("Spudify" "nds4droid" "MPV" "Lucky-Patcher" "Pac-Man" "Morrowind" "Back")
 				select down in "${cvar[@]}" ; do
 					case $down in
 						"Spudify")
@@ -280,6 +283,17 @@ echo -e "${cyan}$MENU${green}"
 							echo -e "${green}Main Menu"
 							break
 							;;
+						"MPV")
+							git clone --depth 1 --filter=blob:none --no-checkout https://github.com/Crisp-Casper/termux-install
+							cd termux-install/
+							git checkout main MPV
+							cd MPV
+							mv mpv.apk $HOME/storage/downloads/mpv.apk
+							cd $HOME
+							rm termux-install -rf
+							clear
+							echo -e "${green}Main Menu"
+							break
        						"Lucky-Patcher")
 	     						git clone --depth 1 --filter=blob:none --no-checkout https://github.com/Crisp-Casper/termux-install
 							cd termux-install/
