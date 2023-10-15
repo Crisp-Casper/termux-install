@@ -149,7 +149,7 @@ echo -e "${cyan}$MENU${green}"
 				fi
 				clear
 				echo -e "${red}YouTube Menu"
-				yvar=("Search")
+				yvar=("Search" "Search History" "Watch History" "Subscriptions" "Add Subscriptions" "Main Menu")
 		select tube in "${yvar[@]}" ; do
 			case $tube in
 				"Search")
