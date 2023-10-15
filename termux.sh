@@ -140,11 +140,11 @@ echo -e "${cyan}$MENU${green}"
 			"YouTube")
 				clear
 				if test -f $PREFIX/bin/ytfzf ; then
-				echo "spotdl installed"
+				echo "ytfzf installed"
 				else
 				pkg install ytfzf
 				mkdir ytfzf
-				curl websight >> .config/ytfzf/conf.sh
+				curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/ytfzf > .config/ytfzf/conf.sh
 				fi
 				clear
 				;;
