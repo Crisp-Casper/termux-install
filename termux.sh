@@ -177,7 +177,7 @@ echo -e "${cyan}$MENU${green}"
 				"Add Subscriptions")
 					clear
 					echo -e "${green}Enter link to channel:"
-					real subscription
+					read subscription
 					ytfzf --channel-link="$subscription" >> .config/ytfzf/subscriptions
 					clear
 					;;
