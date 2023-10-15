@@ -143,14 +143,15 @@ echo -e "${cyan}$MENU${green}"
 				if test -f $PREFIX/bin/ytfzf ; then
 				echo "ytfzf installed"
 				else
-				pkg install ytfzf
+				yes | pkg install ytfzf chafa
 				mkdir .config/ytfzf
 				curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/ytfzf > .config/ytfzf/conf.sh
 				fi
 				clear
 				echo Search:
 				read search
-				ytfzf -t
+				ytfzf -T chafa -t $search
+				break
 				;;
 			"Spotdl")
 				clear
