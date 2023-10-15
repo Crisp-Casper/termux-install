@@ -139,6 +139,12 @@ echo -e "${cyan}$MENU${green}"
 					done ;;
 			"Spotdl")
 				clear
+				if test -f $PREFIX/bin/spotdl ; then
+				echo "spotdl installed"
+				else
+				pip install spotdl
+				fi
+				clear
 				rm $HOME/Music -rf
 				mkdir $HOME/Music
 				cd $HOME/Music
@@ -262,6 +268,7 @@ echo -e "${cyan}$MENU${green}"
 							clear
 							echo -e "${green}Main Menu"
 							break
+							;;
 						"Pac-Man")
 							clear
 							if test -f $PREFIX/bin/myman ; then
