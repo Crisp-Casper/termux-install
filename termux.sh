@@ -27,7 +27,7 @@ the Enter key to display the available command list.${white}"
 
 MENU='Please enter your choice:		'
 
-var=("Searx" "Anime" "Spotdl" "yt-dlp" "Genact" "Espeak" "TTY-Clock" "Games/Applications" "Update" "EXIT")
+var=("Searx" "Anime" "YouTube" "Spotdl" "yt-dlp" "Genact" "Espeak" "TTY-Clock" "Games/Applications" "Update" "EXIT")
 echo -e "${cyan}$MENU${green}"
 	select opt in "${var[@]}" ; do
 		case $opt in
@@ -137,6 +137,17 @@ echo -e "${cyan}$MENU${green}"
 
 						esac
 					done ;;
+			"YouTube")
+				clear
+				if test -f $PREFIX/bin/ytfzf ; then
+				echo "spotdl installed"
+				else
+				pkg install ytfzf
+				mkdir ytfzf
+				curl websight >> .config/ytfzf/conf.sh
+				fi
+				clear
+				;;
 			"Spotdl")
 				clear
 				if test -f $PREFIX/bin/spotdl ; then
