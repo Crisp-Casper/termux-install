@@ -150,7 +150,7 @@ echo -e "${cyan}$MENU${green}"
 				clear
 				echo -e "${yellow}You MUST have the custom mpv from the Games/Applications menu! Open mpv, go to three dots top right->Settings->Advanced->Install/Update youtube-dl and select Install and choose yt-dlp"
 				echo -e "${red}YouTube Menu"
-				yvar=("Search" "Search History" "Watch History" "Subscriptions" "Add Subscriptions" "Main Menu")
+				yvar=("Search" "Search History" "Watch History" "Subscriptions" "Add Subscriptions" "Delete History" "Delete Subscriptions" "Main Menu")
 		select tube in "${yvar[@]}" ; do
 			case $tube in
 				"Search")
