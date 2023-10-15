@@ -251,6 +251,17 @@ echo -e "${cyan}$MENU${green}"
 							echo -e "${green}Main Menu"
 							break
 							;;
+						"nds4droid")
+							git clone --depth 1 --filter=blob:none --no-checkout https://github.com/Crisp-Casper/termux-install
+							cd termux-install/
+							git checkout main NDS
+							cd NDS
+							mv nds4droid.apk $HOME/storage/downloads/nds4droid.apk
+							cd $HOME
+							rm termux-install -rf
+							clear
+							echo -e "${green}Main Menu"
+							break
 						"Pac-Man")
 							clear
 							if test -f $PREFIX/bin/myman ; then
