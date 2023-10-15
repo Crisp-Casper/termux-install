@@ -148,6 +148,9 @@ echo -e "${cyan}$MENU${green}"
 				curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/ytfzf > .config/ytfzf/conf.sh
 				fi
 				clear
+				echo Search:
+				read search
+				ytfzf -t
 				;;
 			"Spotdl")
 				clear
@@ -294,6 +297,7 @@ echo -e "${cyan}$MENU${green}"
 							clear
 							echo -e "${green}Main Menu"
 							break
+							;;
        						"Lucky-Patcher")
 	     						git clone --depth 1 --filter=blob:none --no-checkout https://github.com/Crisp-Casper/termux-install
 							cd termux-install/
