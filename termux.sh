@@ -148,11 +148,23 @@ echo -e "${cyan}$MENU${green}"
 				curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/ytfzf > .config/ytfzf/conf.sh
 				fi
 				clear
-				echo Search:
-				read search
-				ytfzf -T chafa -t $search
-				break
-				;;
+				yvar=("Search")
+		select tube in "${yvar[@]}" ; do
+			case $tube in
+				"Search")
+					echo -e "${magenta}Search:"
+					read search
+					ytfzf -T chafa -t $search
+					clear
+					break
+					;;
+				"Main Menu")
+					clear
+					echo -e "{$green}Main Menu"
+					break
+					;;
+				esac
+			done ;;
 			"Spotdl")
 				clear
 				if test -f $PREFIX/bin/spotdl ; then
