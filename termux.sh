@@ -193,7 +193,7 @@ echo -e "${cyan}$MENU${green}"
 				if test -f $PREFIX/bin/spotdl ; then
 				echo "spotdl installed"
 				else
-				pkg install binutils
+				yes | pkg install binutils
 				pip install spotdl
 				fi
 				clear
@@ -231,7 +231,7 @@ echo -e "${cyan}$MENU${green}"
 					clear
 					echo -e "${green}Main Menu"
 				else
-					pkg install rust
+					yes | pkg install rust
 					git clone https://github.com/svenstaro/genact.git
 					cd genact
 					cargo install --path ./
@@ -247,7 +247,7 @@ echo -e "${cyan}$MENU${green}"
 				if test -f $PREFIX/bin/espeak ; then
 				echo "espeak installed"
 				else
-				pip install espeak
+				yes | pkg install espeak
 				fi
 				clear
 				sed -i 's/# volume-keys/volume-keys/g' $HOME/.termux/termux.properties
@@ -285,7 +285,7 @@ echo -e "${cyan}$MENU${green}"
 				if test -f $PREFIX/bin/tty-clock ; then
 				echo "tty-clock installed"
 				else
-				pkg install tty-clock
+				yes | pkg install tty-clock
 				fi
 				clear
 				tty-clock -cstC 6
