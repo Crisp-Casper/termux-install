@@ -148,6 +148,7 @@ echo -e "${cyan}$MENU${green}"
 				curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/ytfzf > .config/ytfzf/conf.sh
 				fi
 				clear
+				echo -e "${yellow}You MUST have the custom mpv from the Games/Applications menu! Open mpv, go to three dots top right->Settings->Advanced->Install/Update youtube-dl and select Install and choose yt-dlp"
 				echo -e "${red}YouTube Menu"
 				yvar=("Search" "Search History" "Watch History" "Subscriptions" "Add Subscriptions" "Main Menu")
 		select tube in "${yvar[@]}" ; do
@@ -179,6 +180,16 @@ echo -e "${cyan}$MENU${green}"
 					echo -e "${green}Enter link to channel:"
 					read subscription
 					ytfzf --channel-link="$subscription" >> .config/ytfzf/subscriptions
+					clear
+					;;
+				"Delete History")
+					clear
+					[[ "$(read -e -p 'Continue? [y/N]> '; echo $REPLY)" == [Yy]* ]] && ytfzf -x || echo stopping
+					clear
+					;;
+				"Delete Subscriptions")
+					clear
+					[[ "$(read -e -p 'Continue? [y/N]> '; echo $REPLY)" == [Yy]* ]] && rm .config/ytfzf/subscriptions || echo stopping
 					clear
 					;;
 				"Main Menu")
