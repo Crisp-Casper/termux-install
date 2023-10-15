@@ -148,15 +148,38 @@ echo -e "${cyan}$MENU${green}"
 				curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/ytfzf > .config/ytfzf/conf.sh
 				fi
 				clear
+				echo -e "${red}YouTube Menu"
 				yvar=("Search")
 		select tube in "${yvar[@]}" ; do
 			case $tube in
 				"Search")
+					clear
 					echo -e "${magenta}Search:"
 					read search
 					ytfzf -T chafa -t $search
 					clear
-					break
+					;;
+				"Search History")
+					clear
+					ytfzf -q
+					clear
+					;;
+				"Watch History")
+					clear
+					ytfzf -H
+					clear
+					;;
+				"Subscriptions")
+					clear
+					ytfzf -c youtube-subscriptions
+					clear
+					;;
+				"Add Subscriptions")
+					clear
+					echo -e "${green}Enter link to channel:"
+					real subscription
+					ytfzf --channel-link="$subscription" >> .config/ytfzf/subscriptions
+					clear
 					;;
 				"Main Menu")
 					clear
