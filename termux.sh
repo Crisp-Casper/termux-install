@@ -204,7 +204,7 @@ echo -e "${cyan}$MENU${green}"
 				if test -f $PREFIX/bin/spotdl ; then
 				echo "spotdl installed"
 				else
-				yes | pkg install binutils
+				yes | pkg install binutils rust
 				pip install spotdl
 				fi
 				clear
