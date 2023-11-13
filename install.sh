@@ -15,7 +15,7 @@ curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/updater.
 chmod 777 updater.sh
 bash updater.sh
 rm updater.sh
-pkg install python ffmpeg libxslt git wget python-pip p7zip figlet rsync -y
+pkg install python ffmpeg libxslt git wget python-pip p7zip figlet rsync rust -y
 pip install setuptools wheel
 python3 -m pip install --force-reinstall https://github.com/yt-dlp/yt-dlp/archive/master.tar.gz
 sed -i 's/# shortcut/shortcut/g' ~/.termux/termux.properties
