@@ -62,7 +62,7 @@ echo -e "${cyan}$MENU${green}"
 				echo "ani-cli installed"
 				else
 				curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/ani-cli.sh | bash
-				pkg install fzf aria2
+				yes | pkg install fzf aria2
 				fi
 				clear
 				echo -e "${cyan}$MENU${magenta}"
@@ -204,7 +204,6 @@ echo -e "${cyan}$MENU${green}"
 				if test -f $PREFIX/bin/spotdl ; then
 				echo "spotdl installed"
 				else
-				yes | pkg install binutils rust
 				pip install spotdl
 				fi
 				clear
