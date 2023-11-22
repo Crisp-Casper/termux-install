@@ -37,6 +37,7 @@ echo -e "${cyan}$MENU${green}"
 				echo "Searx is installed"
 				clear
 				else
+				CFLAGS="-Wno-incompatible-function-pointer-types -Wno-implicit-function-declaration"
 				git clone https://github.com/Crisp-Casper/searx.git
 				pip install -r searx/requirements.txt
 				fi
