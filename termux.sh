@@ -432,9 +432,23 @@ echo -e "${cyan}$MENU${green}"
 					esac
 				done ;;
 			"Update")
-				curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash
-				exit
-				;;
+				uvar=("Normal" "Devs" "Back")
+							select update in "${uvar[@]}" ; do
+								case $update in
+									"Normal")
+										curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash
+										exit
+										;;
+									"Dev")
+										curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/Update.sh | bash
+										exit
+										;;
+									"Back")
+										break
+										;;
+							esac
+						done ;;
+
 			"EXIT")
 				exit
 				;;
