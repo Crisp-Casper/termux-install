@@ -267,9 +267,9 @@ echo -e "${cyan}$MENU${green}"
 								ffmpeg -i $HOME/storage/shared/Documents/Convert/* Output%d.$convert
 								break
 								;;
-							"Back)
+							"Back")
 								clear
-								echo -e "{$green}Main Menu"
+								echo -e "${green}Main Menu"
 								break
 								;;
 
