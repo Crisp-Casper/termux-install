@@ -244,7 +244,7 @@ echo -e "${cyan}$MENU${green}"
 						case $convert in
 							"MP3")
 								echo -e "${white}"
-								ffmpeg -i $HOME/storage/Documents/Convert/* Output%d.$convert
+								ffmpeg -i $HOME/storage/Documents/Convert/ Output%d.$convert
 								break
 								;;
 							"MP4")
@@ -254,7 +254,7 @@ echo -e "${cyan}$MENU${green}"
 								;;
 							"JPG")
 								echo -e "${white}"
-								ffmpeg -i $HOME/storage/Documents/Convert/* Output%d.$convert
+								ffmpeg -i $HOME/storage/Documents/Convert/ Output%d.$convert
 								break
 								;;
 							"PNG")
