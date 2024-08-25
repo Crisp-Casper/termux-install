@@ -306,16 +306,15 @@ echo -e "${cyan}$MENU${green}"
 			"Games/Applications")
 				clear
 				echo -e "${cyan}$MENU${red}"
-				cvar=("Spudify" "nds4droid" "MPV" "Lucky-Patcher" "Pac-Man" "Morrowind" "Back")
+				cvar=("xManager" "nds4droid" "MPV" "Lucky-Patcher" "Pac-Man" "Morrowind" "Back")
 				select down in "${cvar[@]}" ; do
 					case $down in
-						"Spudify")
+						"xManager")
 							git clone --depth 1 --filter=blob:none --no-checkout https://github.com/Crisp-Casper/termux-install
 							cd termux-install/
-							git checkout main Spudify
-							cd Spudify
-							7z x Spudify.zip.001
-							mv Spudify.apk $HOME/storage/downloads/Spudify.apk
+							git checkout main xManager
+							cd xManager
+							mv xManager.apk $HOME/storage/downloads/xManager.apk
 							cd $HOME
 							rm termux-install -rf
 							clear
