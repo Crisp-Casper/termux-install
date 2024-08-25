@@ -432,7 +432,7 @@ echo -e "${cyan}$MENU${green}"
 					esac
 				done ;;
 			"Update")
-				uvar=("Normal" "Devs" "Back")
+				uvar=("Normal" "Dev" "Back")
 							select update in "${uvar[@]}" ; do
 								case $update in
 									"Normal")
@@ -440,7 +440,7 @@ echo -e "${cyan}$MENU${green}"
 										exit
 										;;
 									"Dev")
-										curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/UpdateDev.sh | bash
+										curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/dev/UpdateDev.sh | bash
 										exit
 										;;
 									"Back")
