@@ -239,7 +239,7 @@ echo -e "${cyan}$MENU${green}"
 				mkdir $HOME/storage/shared/Documents/Convert
 				clear
 				echo -e "${cyan}Put your file into Documents/Convert${magenta}"
-				convar=("MP4" "MP3" "JPG" "PNG" "WAV" "Lower Quality" "Back")
+				convar=("MP4" "MP3" "JPG" "PNG" "WAV" "Lower-Quality" "Back")
 					select convert in ${convar[@]} ; do
 						case $convert in
 							"MP3")
@@ -256,7 +256,7 @@ echo -e "${cyan}$MENU${green}"
 								echo -e "${green}Done!"
 								break
 								;;
-							"Lower Quality")
+							"Lower-Quality")
 								echo -e "${white}"
 								ffmpeg -i $HOME/storage/shared/Documents/Convert/* -crt 28 $HOME/storage/shared/Documents/Convert/Output%d.mp4
 								clear
