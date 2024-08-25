@@ -440,7 +440,7 @@ echo -e "${cyan}$MENU${green}"
 										exit
 										;;
 									"Dev")
-										curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/dev/UpdateDev.sh | bash
+										curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/UpdateDev.sh | bash
 										exit
 										;;
 									"Back")
