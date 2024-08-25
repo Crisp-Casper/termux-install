@@ -238,7 +238,7 @@ echo -e "${cyan}$MENU${green}"
 			"Convert")
 				mkdir $HOME/storage/shared/Documents/Convert
 				clear
-				echo -e "${cyan}Put your file into Documents/Convert${magenta}"
+				echo -e "${cyan}Put one file at a time into Documents/Convert${magenta}"
 				convar=("MP4" "MP3" "JPG" "PNG" "WAV" "Lower-Quality" "Back")
 					select convert in ${convar[@]} ; do
 						case $convert in
