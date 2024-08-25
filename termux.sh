@@ -27,7 +27,7 @@ the Enter key to display the available command list.${white}"
 
 MENU='Please enter your choice:		'
 
-var=("Searx" "Anime" "YouTube" "Spotdl" "yt-dlp" "Genact" "Espeak" "TTY-Clock" "Games/Applications" "Update" "EXIT")
+var=("Searx" "Anime" "YouTube" "Spotdl" "yt-dlp" "Convert" "Genact" "Espeak" "TTY-Clock" "Games/Applications" "Update" "EXIT")
 echo -e "${cyan}$MENU${green}"
 	select opt in "${var[@]}" ; do
 		case $opt in
@@ -235,6 +235,46 @@ echo -e "${cyan}$MENU${green}"
 				clear
 				echo -e "${green}Main Menu"
 				;;
+			"Convert")
+				mkdir $HOME/storage/Documents/Convert
+				clear
+				echo -e "${cyan}Put your file into Documents/Convert${magenta}"
+				convar=("MP4" "MP3" "JPG" "PNG" "WAV")
+					select convert in ${convar[@]} ; do
+						case $convert in
+							"MP3")
+								echo -e "${white}"
+								ffmpeg -i $HOME/storage/Documents/Convert/* Output%d.$convert
+								break
+								;;
+							"MP4")
+								echo -e "${white}"
+								ffmpeg -i $HOME/storage/Documents/Convert/* Output%d.$convert
+								break
+								;;
+							"JPG")
+								echo -e "${white}"
+								ffmpeg -i $HOME/storage/Documents/Convert/* Output%d.$convert
+								break
+								;;
+							"PNG")
+								echo -e "${white}"
+								ffmpeg -i $HOME/storage/Documents/Convert/* Output%d.$convert
+								break
+								;;
+							"WAV")
+								echo -e "${white}"
+								ffmpeg -i $HOME/storage/Documents/Convert/* Output%d.$convert
+								break
+								;;
+							"Main Menu")
+								clear
+								echo -e "{$green}Main Menu"
+								break
+								;;
+
+						esac
+					done
 			"Genact")
 				clear
 				if test -f $HOME/.cargo/bin/genact ; then
