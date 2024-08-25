@@ -244,27 +244,27 @@ echo -e "${cyan}$MENU${green}"
 						case $convert in
 							"MP3")
 								echo -e "${white}"
-								ffmpeg -i $HOME/storage/shared/Documents/Convert/* Output%d.$convert
+								ffmpeg -i $HOME/storage/shared/Documents/Convert/* $HOME/storage/shared/Documents/Convert/Output%d.$convert
 								break
 								;;
 							"MP4")
 								echo -e "${white}"
-								ffmpeg -i $HOME/storage/shared/Documents/Convert/* Output%d.$convert
+								ffmpeg -i $HOME/storage/shared/Documents/Convert/* $HOME/storage/shared/Documents/Convert/Output%d.$convert
 								break
 								;;
 							"JPG")
 								echo -e "${white}"
-								ffmpeg -i $HOME/storage/shared/Documents/Convert/* Output%d.$convert
+								ffmpeg -i $HOME/storage/shared/Documents/Convert/* $HOME/storage/shared/Documents/Convert/Output%d.$convert
 								break
 								;;
 							"PNG")
 								echo -e "${white}"
-								ffmpeg -i $HOME/storage/shared/Documents/Convert/* Output%d.$convert
+								ffmpeg -i $HOME/storage/shared/Documents/Convert/* $HOME/storage/shared/Documents/Convert/Output%d.$convert
 								break
 								;;
 							"WAV")
 								echo -e "${white}"
-								ffmpeg -i $HOME/storage/shared/Documents/Convert/* Output%d.$convert
+								ffmpeg -i $HOME/storage/shared/Documents/Convert/* $HOME/storage/shared/Documents/Convert/Output%d.$convert
 								break
 								;;
 							"Back")
