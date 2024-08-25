@@ -237,7 +237,7 @@ echo -e "${cyan}$MENU${green}"
 				;;
 			"Convert")
 				mkdir $HOME/storage/Documents/Convert
-				clear
+			#	clear
 				echo -e "${cyan}Put your file into Documents/Convert${magenta}"
 				convar=("MP4" "MP3" "JPG" "PNG" "WAV")
 					select convert in ${convar[@]} ; do
