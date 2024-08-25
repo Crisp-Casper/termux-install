@@ -239,7 +239,7 @@ echo -e "${cyan}$MENU${green}"
 				mkdir $HOME/storage/shared/Documents/Convert
 			#	clear
 				echo -e "${cyan}Put your file into Documents/Convert${magenta}"
-				convar=("MP4" "MP3" "JPG" "PNG" "WAV")
+				convar=("MP4" "MP3" "JPG" "PNG" "WAV" "Main Menu")
 					select convert in ${convar[@]} ; do
 						case $convert in
 							"MP3")
