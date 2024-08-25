@@ -216,7 +216,7 @@ echo -e "${cyan}$MENU${green}"
 				clear
 				rsync -r --info=progress2 --stats $HOME/storage/music/$dir "$dir"
 				mkdir "$dir"
-				cd "$HOME/$dir"
+				cd "$HOME/Music/$dir"
 				rm -rf $dir
 				echo -e "${green}Now paste your spotify link"
 				read spotify
