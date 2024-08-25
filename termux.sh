@@ -447,7 +447,6 @@ echo -e "${cyan}$MENU${green}"
 										break
 										;;
 							esac
-						done ;;
 
 			"EXIT")
 				exit
