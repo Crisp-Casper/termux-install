@@ -220,7 +220,7 @@ echo -e "${cyan}$MENU${green}"
 				rm -rf $dir
 				echo -e "${green}Now paste your spotify link"
 				read spotify
-				spotdl $spotify | sed 's/?si.*//g'
+				spotdl $spotify --log-level DEBUG | sed 's/?si.*//g'
 				cd $HOME/Music
 				rsync -r --info=progress2 --stats --remove-source-files "$dir" $HOME/storage/music
 				cd $HOME/
