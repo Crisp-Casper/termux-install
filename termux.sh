@@ -274,7 +274,7 @@ echo -e "${cyan}$MENU${green}"
 								;;
 
 						esac
-					done
+					done ;;
 			"Genact")
 				clear
 				if test -f $HOME/.cargo/bin/genact ; then
