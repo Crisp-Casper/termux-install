@@ -245,26 +245,36 @@ echo -e "${cyan}$MENU${green}"
 							"MP3")
 								echo -e "${white}"
 								ffmpeg -i $HOME/storage/shared/Documents/Convert/* $HOME/storage/shared/Documents/Convert/Output%d.$convert
+								clear
+								echo -e "${green}Done!"
 								break
 								;;
 							"MP4")
 								echo -e "${white}"
 								ffmpeg -i $HOME/storage/shared/Documents/Convert/* $HOME/storage/shared/Documents/Convert/Output%d.$convert
+								clear
+								echo -e "${green}Done!"
 								break
 								;;
 							"JPG")
 								echo -e "${white}"
 								ffmpeg -i $HOME/storage/shared/Documents/Convert/* $HOME/storage/shared/Documents/Convert/Output%d.$convert
+								clear
+								echo -e "${green}Done!"
 								break
 								;;
 							"PNG")
 								echo -e "${white}"
 								ffmpeg -i $HOME/storage/shared/Documents/Convert/* $HOME/storage/shared/Documents/Convert/Output%d.$convert
+								clear
+								echo -e "${green}Done!"
 								break
 								;;
 							"WAV")
 								echo -e "${white}"
 								ffmpeg -i $HOME/storage/shared/Documents/Convert/* $HOME/storage/shared/Documents/Convert/Output%d.$convert
+								clear
+								echo -e "${green}Done!"
 								break
 								;;
 							"Back")
