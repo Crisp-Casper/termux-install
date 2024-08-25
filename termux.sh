@@ -213,7 +213,7 @@ echo -e "${cyan}$MENU${green}"
 				cd $HOME/Music
 				echo -e "${green}Name the playlist folder"
 				read dir
-				cp -r $HOME/storage/music/$dir "$dir"
+				cp -r $HOME/storage/music/"$dir" "$dir"
 				mkdir "$dir"
 				cd "$HOME/Music/$dir"
 				rm -rf $dir
