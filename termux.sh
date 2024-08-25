@@ -213,11 +213,11 @@ echo -e "${cyan}$MENU${green}"
 				cd $HOME/Music
 				echo -e "${green}Name the playlist folder"
 				read dir
-				clear
 				cp -r $HOME/storage/music/$dir "$dir"
 				mkdir "$dir"
 				cd "$HOME/Music/$dir"
 				rm -rf $dir
+				clear
 				echo -e "${green}Now paste your spotify link"
 				read spotify
 				spotdl $spotify --log-level DEBUG | sed 's/?si.*//g'
