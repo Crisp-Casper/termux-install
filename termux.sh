@@ -258,7 +258,7 @@ echo -e "${cyan}$MENU${green}"
 								;;
 							"Lower-Quality")
 								echo -e "${white}"
-								ffmpeg -i $HOME/storage/shared/Documents/Convert/* -crt 28 $HOME/storage/shared/Documents/Convert/Output%d.mp4
+								ffmpeg -i $HOME/storage/shared/Documents/Convert/* -crf 28 $HOME/storage/shared/Documents/Convert/Output%d.mp4
 								clear
 								echo -e "${green}Done!"
 								break
