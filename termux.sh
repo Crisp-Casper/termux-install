@@ -214,7 +214,7 @@ echo -e "${cyan}$MENU${green}"
 				echo -e "${green}Name the playlist folder"
 				read dir
 				clear
-				rsync -r --info=progress2 --stats $HOME/storage/music/$dir "$dir"
+				cp -r $HOME/storage/music/$dir "$dir"
 				mkdir "$dir"
 				cd "$HOME/Music/$dir"
 				rm -rf $dir
