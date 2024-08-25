@@ -42,18 +42,18 @@ echo -e "${cyan}$MENU${green}"
 				pip install -r searx/requirements.txt
 				fi
 				clear
-				echo -e "${red}"
-				figlet -w 50 -f script Browser Starting in 3
-				sleep 1
-				clear
-				echo -e "${yellow}"
-				figlet -w 50 -f script Browser Starting in 2
-				sleep 1
-				clear
-				echo -e "${green}"
-				figlet -w 50 -f script Browser Starting in 1
-				sleep 1
-				clear
+				#echo -e "${red}"
+				#echo -efiglet -w 50 -f script Browser Starting in 3
+				#echo -esleep 1
+				#echo -eclear
+				#echo -eecho -e "${yellow}"
+				#echo -efiglet -w 50 -f script Browser Starting in 2
+				#echo -esleep 1
+				#echo -eclear
+				#echo -eecho -e "${green}"
+				#echo -efiglet -w 50 -f script Browser Starting in 1
+				#echo -esleep 1
+				#echo -eclear
 				python searx/searx/webapp.py
 				echo -e "${green}"
 				;;
@@ -214,6 +214,7 @@ echo -e "${cyan}$MENU${green}"
 				echo -e "${green}Name the playlist folder"
 				read dir
 				clear
+				rsync -r --info=progress2 --stats $HOME/storage/music/$dir "$dir"
 				mkdir "$dir"
 				cd "$dir"
 				echo -e "${green}Now paste your spotify link"
