@@ -260,7 +260,6 @@ echo -e "${cyan}$MENU${green}"
 							"Lower-Quality")
 								echo -e "${white}"
 								echo -e "Enter compression rate (values go up! 18 lossless, 23 default, 28 compressed, ect)"
-								echo -e "Valid range is 0 to 63" 
 								read quality
 								ffmpeg -i $HOME/storage/shared/Documents/Convert/* -crf $quality $HOME/storage/shared/Documents/Convert/Output%d.mp4
 								clear
