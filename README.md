@@ -22,7 +22,9 @@ espeak (Become Stephen Hawking)
 tty-clock (better clock <3)
 
 Games/Applications:
-Modded spotify!
 Pac-Man (myman the Pac-Man clone)
 Morrowind
+MPV
+Lucky-Patcher
+NDS4droid
 ```

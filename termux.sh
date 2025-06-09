@@ -240,7 +240,7 @@ echo -e "${cyan}$MENU${green}"
 				mkdir $HOME/storage/shared/Documents/Convert
 				clear
 				echo -e "${cyan}Put one file at a time into Documents/Convert${magenta}"
-				convar=("MP4" "MP3" "JPG" "PNG" "WAV" "Lower-Quality" "Back")
+				convar=("MP4" "MP3" "JPG" "PNG" "WAV" "Lower-Quality" "Discord-Quality" "Back")
 					select convert in ${convar[@]} ; do
 						case $convert in
 							"MP3")
@@ -266,6 +266,29 @@ echo -e "${cyan}$MENU${green}"
 								echo -e "${green}Done!"
 								break
 								;;
+                            "Discord-Quality")
+                                echo -e "${cyan}Pick the size limit you have${magenta}"
+                                quality=("10Mib" "50Mib" "500Mib")
+                                    select qual in ${quality[@]} ; do
+                                        case $quality in
+                                            "10Mib")
+                                                echo -e "${white}"
+								                ffmpeg -i $HOME/storage/shared/Documents/Convert/* -c:v libx264 -crf 30 -fs 10M $HOME/storage/shared/Documents/Convert/Output%d.mp4
+                                                echo -e "${green}Done!"
+                                                break
+                                                ;;
+                                            "50Mib")
+                                                echo -e "${white}"
+								                ffmpeg -i $HOME/storage/shared/Documents/Convert/* -c:v libx264 -crf 30 -fs 50M $HOME/storage/shared/Documents/Convert/Output%d.mp4
+                                                echo -e "${green}Done!"
+                                                break
+                                                ;;
+                                            "500Mib")
+                                                echo -e "${white}"
+								                ffmpeg -i $HOME/storage/shared/Documents/Convert/* -c:v libx264 -crf 30 -fs 500M $HOME/storage/shared/Documents/Convert/Output%d.mp4
+                                                echo -e "${green}Done!"
+                                                break
+                                                ;;
 							"JPG")
 								echo -e "${white}"
 								ffmpeg -i $HOME/storage/shared/Documents/Convert/* $HOME/storage/shared/Documents/Convert/Output%d.$convert
@@ -366,21 +389,9 @@ echo -e "${cyan}$MENU${green}"
 			"Games/Applications")
 				clear
 				echo -e "${cyan}$MENU${red}"
-				cvar=("xManager" "nds4droid" "MPV" "Lucky-Patcher" "Pac-Man" "Morrowind" "Back")
+				cvar=("nds4droid" "MPV" "Lucky-Patcher" "Pac-Man" "Morrowind" "Back")
 				select down in "${cvar[@]}" ; do
 					case $down in
-						"xManager")
-							git clone --depth 1 --filter=blob:none --no-checkout https://github.com/Crisp-Casper/termux-install
-							cd termux-install/
-							git checkout main xManager
-							cd xManager
-							mv xManager.apk $HOME/storage/downloads/xManager.apk
-							cd $HOME
-							rm termux-install -rf
-							clear
-							echo -e "${green}Main Menu"
-							break
-							;;
 						"nds4droid")
 							git clone --depth 1 --filter=blob:none --no-checkout https://github.com/Crisp-Casper/termux-install
 							cd termux-install/
