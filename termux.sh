@@ -289,6 +289,8 @@ echo -e "${cyan}$MENU${green}"
                                                 echo -e "${green}Done!"
                                                 break
                                                 ;;
+                                        esac
+                                    done ;;
 							"JPG")
 								echo -e "${white}"
 								ffmpeg -i $HOME/storage/shared/Documents/Convert/* $HOME/storage/shared/Documents/Convert/Output%d.$convert
