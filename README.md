@@ -1,6 +1,6 @@
 ![IM TRYING!!!](/assets/images/program.gif)
 # Download
-https://f-droid.org/repo/com.termux_118.apk
+https://f-droid.org/repo/com.termux_1022.apk
 # just run this for termux to be set up
 ```sh
 termux-change-repo
@@ -17,6 +17,7 @@ searx (Web Engine)
 ani-cli (Watch anime through superior methods!)
 spotdl (Download Spotify music/playlist)
 yt-dlp (Share Directly to termux or use this command to download video from almost any websight!)
+audio/video conversion
 genact (pretend to be a hacker!)
 espeak (Become Stephen Hawking)
 tty-clock (better clock <3)

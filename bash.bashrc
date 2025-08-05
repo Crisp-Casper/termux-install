@@ -26,6 +26,8 @@ fi
 clear
 alias c=clear
 alias e=exit
+alias music=./all.sh
+alias m=./all.sh
 alias work="sed -i 's/Youtube-DL/work/g' ~/.config/yt-dlp/config"
 alias og="sed -i 's/work/Youtube-DL/g' ~/.config/yt-dlp/config"
 bash $HOME/termux.sh
