@@ -26,6 +26,5 @@ Games/Applications:
 Pac-Man (myman the Pac-Man clone)
 Morrowind
 MPV
-Lucky-Patcher
 NDS4droid
 ```
