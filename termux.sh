@@ -27,7 +27,7 @@ the Enter key to display the available command list.${white}"
 
 MENU='Please enter your choice:		'
 
-var=("Searx" "Anime" "YouTube" "Spotdl" "yt-dlp" "Convert" "Genact" "Espeak" "TTY-Clock" "Games/Applications" "Update" "EXIT")
+var=("Searx" "Anime" "YouTube" "Spotdl" "yt-dlp" "Convert" "Minecraft Server" "Genact" "Espeak" "TTY-Clock" "Games/Applications" "Update" "EXIT")
 echo -e "${cyan}$MENU${green}"
 	select opt in "${var[@]}" ; do
 		case $opt in
@@ -320,6 +320,23 @@ echo -e "${cyan}$MENU${green}"
 
 						esac
 					done ;;
+            "Minecraft Server")
+                clear
+                if test -f $HOME/Minecraft ; then
+                    echo -e white
+                    cd $HOME/Minecraft
+                    java -Xmx1G -jar paper-1.21.8-25.jar
+                    cd ..
+                else
+                    yes | pkg install openjdk-21
+                    mkdir Minecraft
+                    cd $HOME/Minecraft
+                    curl -O https://fill-data.papermc.io/v1/objects/fb73c7e310215016955617ab957022d9e1d47aeba206df3a98c5ecb43756527c/paper-1.21.8-25.jar
+                    java -Xmx1G -jar paper-1.21.8-25.jar
+                    sleep 5
+                    sed -i s/false/true/g eula.txt
+                    java -Xmx1G -jar paper-1.21.8-25.jar
+                fi ;;
 			"Genact")
 				clear
 				if test -f $HOME/.cargo/bin/genact ; then
