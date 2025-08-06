@@ -27,7 +27,7 @@ the Enter key to display the available command list.${white}"
 
 MENU='Please enter your choice:		'
 
-var=("Searx" "Anime" "YouTube" "Spotdl" "yt-dlp" "Convert" "Minecraft Server" "Genact" "Espeak" "TTY-Clock" "Games/Applications" "Update" "EXIT")
+var=("Searx" "Anime" "Spotdl" "yt-dlp" "Convert" "Minecraft Server" "Genact" "Espeak" "TTY-Clock" "Games/Applications" "Update" "EXIT")
 echo -e "${cyan}$MENU${green}"
 	select opt in "${var[@]}" ; do
 		case $opt in
@@ -139,67 +139,6 @@ echo -e "${cyan}$MENU${green}"
 
 						esac
 					done ;;
-			"YouTube")
-				clear
-				if test -f $PREFIX/bin/ytfzf ; then
-				echo "ytfzf installed"
-				else
-				yes | pkg install ytfzf chafa
-				mkdir .config/ytfzf
-				curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/main/ytfzf > .config/ytfzf/conf.sh
-				fi
-				clear
-				echo -e "${yellow}You MUST have the custom mpv from the Games/Applications menu! Open mpv, go to three dots top right->Settings->Advanced->Install/Update youtube-dl and select Install and choose yt-dlp"
-				echo -e "${red}YouTube Menu"
-				yvar=("Search" "Search History" "Watch History" "Subscriptions" "Add Subscriptions" "Delete History" "Delete Subscriptions" "Main Menu")
-		select tube in "${yvar[@]}" ; do
-			case $tube in
-				"Search")
-					clear
-					echo -e "${magenta}Search:"
-					read search
-					ytfzf -T chafa -t $search
-					clear
-					;;
-				"Search History")
-					clear
-					ytfzf -q
-					clear
-					;;
-				"Watch History")
-					clear
-					ytfzf -H
-					clear
-					;;
-				"Subscriptions")
-					clear
-					ytfzf -c youtube-subscriptions
-					clear
-					;;
-				"Add Subscriptions")
-					clear
-					echo -e "${green}Enter link to channel:"
-					read subscription
-					ytfzf --channel-link="$subscription" >> .config/ytfzf/subscriptions
-					clear
-					;;
-				"Delete History")
-					clear
-					[[ "$(read -e -p 'Continue? [y/N]> '; echo $REPLY)" == [Yy]* ]] && ytfzf -x || echo stopping
-					clear
-					;;
-				"Delete Subscriptions")
-					clear
-					[[ "$(read -e -p 'Continue? [y/N]> '; echo $REPLY)" == [Yy]* ]] && rm .config/ytfzf/subscriptions || echo stopping
-					clear
-					;;
-				"Main Menu")
-					clear
-					echo -e "{$green}Main Menu"
-					break
-					;;
-				esac
-			done ;;
 			"Spotdl")
 				clear
 				if test -f $PREFIX/bin/spotdl ; then
