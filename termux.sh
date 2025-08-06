@@ -27,7 +27,7 @@ the Enter key to display the available command list.${white}"
 
 MENU='Please enter your choice:		'
 
-var=("Searx" "Anime" "Spotdl" "yt-dlp" "Convert" "Minecraft Server" "Genact" "Espeak" "TTY-Clock" "Games/Applications" "Update" "EXIT")
+var=("Searx" "Anime" "yt-dlp" "Spotdl" "Convert" "Minecraft Server" "Genact" "Espeak" "TTY-Clock" "Games/Applications" "Update" "EXIT")
 echo -e "${cyan}$MENU${green}"
 	select opt in "${var[@]}" ; do
 		case $opt in
