@@ -391,7 +391,7 @@ echo -e "${cyan}$MENU${green}"
 			"Games/Applications")
 				clear
 				echo -e "${cyan}$MENU${red}"
-				cvar=("nds4droid" "MPV" "Lucky-Patcher" "Pac-Man" "Morrowind" "Back")
+				cvar=("nds4droid" "MPV" "Pac-Man" "Morrowind" "Back")
 				select down in "${cvar[@]}" ; do
 					case $down in
 						"nds4droid")
@@ -418,19 +418,6 @@ echo -e "${cyan}$MENU${green}"
 							echo -e "${green}Main Menu"
 							break
 							;;
-       						"Lucky-Patcher")
-	     						git clone --depth 1 --filter=blob:none --no-checkout https://github.com/Crisp-Casper/termux-install
-							cd termux-install/
-							git checkout main Lucky-Patcher
-							cd Lucky-Patcher
-							mv LP_Downloader.apk $HOME/storage/downloads/Lucky-Patcher.apk
-							cd $HOME
-							rm termux-install -rf
-							clear
-							echo -e "${green}Main Menu"
-							break
-							;;
-
 						"Pac-Man")
 							clear
 							if test -f $PREFIX/bin/myman ; then
