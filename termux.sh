@@ -327,6 +327,7 @@ echo -e "${cyan}$MENU${green}"
                     cd $HOME/Minecraft
                     java -Xmx1G -jar paper-1.21.8-25.jar
                     cd ..
+					echo -e "${green}Main Menu"
                 else
                     yes | pkg install openjdk-21
                     mkdir Minecraft
@@ -336,6 +337,8 @@ echo -e "${cyan}$MENU${green}"
                     sleep 5
                     sed -i s/false/true/g eula.txt
                     java -Xmx1G -jar paper-1.21.8-25.jar
+                    cd ..
+					echo -e "${green}Main Menu"
                 fi ;;
 			"Genact")
 				clear
