@@ -2,7 +2,6 @@
 #!/bin/bash
 
 #Make folders
-mkdir /data/data/com.termux/files/home/storage/music/All
 mkdir /data/data/com.termux/files/home/storage/music/bop
 mkdir /data/data/com.termux/files/home/storage/music/catface
 mkdir /data/data/com.termux/files/home/storage/music/Ching,\ ching,\ chop-seuy
