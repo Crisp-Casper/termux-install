@@ -367,6 +367,7 @@ echo -e "${cyan}$MENU${green}"
 							cd termux-install/
 							git checkout main NDS
 							cd NDS
+                            7z x nds4droid.zip
 							mv nds4droid.apk $HOME/storage/downloads/nds4droid.apk
 							cd $HOME
 							rm termux-install -rf
