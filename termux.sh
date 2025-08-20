@@ -379,6 +379,7 @@ echo -e "${cyan}$MENU${green}"
 							cd termux-install/
 							git checkout main MPV
 							cd MPV
+                            7z x mpv.zip.001
 							mv mpv.apk $HOME/storage/downloads/mpv.apk
 							cd $HOME
 							rm termux-install -rf
