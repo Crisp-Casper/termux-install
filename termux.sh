@@ -261,8 +261,8 @@ echo -e "${cyan}$MENU${green}"
 					done ;;
             "Minecraft Server")
                 clear
-                if test -f $HOME/Minecraft ; then
-                    echo -e white
+                if test -d $HOME/Minecraft ; then
+                    echo -e "${white}"
                     cd $HOME/Minecraft
                     java -Xmx1G -jar paper-1.21.8-25.jar
                     cd ..
@@ -273,9 +273,16 @@ echo -e "${cyan}$MENU${green}"
                     mkdir Minecraft
                     cd $HOME/Minecraft
                     curl -O https://fill-data.papermc.io/v1/objects/fb73c7e310215016955617ab957022d9e1d47aeba206df3a98c5ecb43756527c/paper-1.21.8-25.jar
-                    java -Xmx1G -jar paper-1.21.8-25.jar
-                    sleep 5
-                    sed -i s/false/true/g eula.txt
+                    echo eula=true > eula.txt
+                    mkdir plugins
+                    mkdir plugins/Geyser-Spigot
+                    curl -L https://raw.githubusercontent.com/GeyserMC/Geyser/refs/heads/master/core/src/main/resources/config.yml > plugins/Geyser-Spigot/config.yml
+                    curl -L https://download.geysermc.org/v2/projects/floodgate/versions/latest/builds/latest/downloads/spigot > plugins/Floodgate.jar
+                    curl -L https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/spigot > plugins/geyser-spigot.jar
+                    curl -L https://server.properties/ > server.properties
+                    sed -i s/online/floodgate/g plugins/Geyser-Spigot/config.yml
+                    sed -i s/enforce-secure-profile=true/enforce-secure-profile=false/g server.properties
+
                     java -Xmx1G -jar paper-1.21.8-25.jar
                     cd ..
                     clear
