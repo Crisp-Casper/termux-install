@@ -359,7 +359,7 @@ echo -e "${cyan}$MENU${green}"
 			"Games/Applications")
 				clear
 				echo -e "${cyan}$MENU${red}"
-				cvar=("nds4droid" "MPV" "Pac-Man" "Morrowind" "Back")
+				cvar=("nds4droid" "MPV" "F-Droid" "LuckyPatcher" "AntiSplit" "Pac-Man" "Morrowind" "Back")
 				select down in "${cvar[@]}" ; do
 					case $down in
 						"nds4droid")
@@ -382,6 +382,45 @@ echo -e "${cyan}$MENU${green}"
 							cd MPV
                             7z x mpv.zip.001
 							mv mpv.apk $HOME/storage/downloads/mpv.apk
+							cd $HOME
+							rm termux-install -rf
+							clear
+							echo -e "${green}Main Menu"
+							break
+							;;
+                        "F-Droid")
+							git clone --depth 1 --filter=blob:none --no-checkout https://github.com/Crisp-Casper/termux-install
+							cd termux-install/
+							git checkout main fdroid
+							cd fdroid
+                            7z x F-Droid.zip
+							mv F-Droid.apk $HOME/storage/downloads/F-Droid.apk
+							cd $HOME
+							rm termux-install -rf
+							clear
+							echo -e "${green}Main Menu"
+							break
+							;;
+                        "LuckyPatcher")
+							git clone --depth 1 --filter=blob:none --no-checkout https://github.com/Crisp-Casper/termux-install
+							cd termux-install/
+							git checkout main lp
+							cd lp
+                            7z x Lucky.zip
+							mv Lucky.apk $HOME/storage/downloads/Lucky.apk
+							cd $HOME
+							rm termux-install -rf
+							clear
+							echo -e "${green}Main Menu"
+							break
+							;;
+                        "AntiSplit")
+							git clone --depth 1 --filter=blob:none --no-checkout https://github.com/Crisp-Casper/termux-install
+							cd termux-install/
+							git checkout main antisplit
+							cd antisplit
+                            7z x AntiSplit.zip
+							mv AntiSplit.apk $HOME/storage/downloads/AntiSplit.apk
 							cd $HOME
 							rm termux-install -rf
 							clear
