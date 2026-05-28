@@ -270,7 +270,7 @@ echo -e "${cyan}$MENU${green}"
                     clear
 					echo -e "${green}Main Menu"
                 else
-                    yes | pkg install openjdk-21
+                    yes | pkg install openjdk-21 openjdk-17 openjdk-25
                     mkdir Minecraft
                     cd $HOME/Minecraft
                     curl https://api.purpurmc.org/v2/purpur/$(curl https://api.purpurmc.org/v2/purpur/ | awk -F'"' '/"current"/ {print $10}')/latest/download -o purpur.jar
