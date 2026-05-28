@@ -264,7 +264,8 @@ echo -e "${cyan}$MENU${green}"
                 if test -d $HOME/Minecraft ; then
                     echo -e "${white}"
                     cd $HOME/Minecraft
-                    java -Xmx1G -jar paper-1.21.8-25.jar
+					curl https://api.purpurmc.org/v2/purpur/$(curl https://api.purpurmc.org/v2/purpur/ | awk -F'"' '/"current"/ {print $10}')/latest/download -o purpur.jar
+                    java -Xmx1G -jar purpur.jar
                     cd ..
                     clear
 					echo -e "${green}Main Menu"
@@ -272,18 +273,17 @@ echo -e "${cyan}$MENU${green}"
                     yes | pkg install openjdk-21
                     mkdir Minecraft
                     cd $HOME/Minecraft
-                    curl -O https://fill-data.papermc.io/v1/objects/fb73c7e310215016955617ab957022d9e1d47aeba206df3a98c5ecb43756527c/paper-1.21.8-25.jar
+                    curl https://api.purpurmc.org/v2/purpur/$(curl https://api.purpurmc.org/v2/purpur/ | awk -F'"' '/"current"/ {print $10}')/latest/download -o purpur.jar
                     echo eula=true > eula.txt
                     mkdir plugins
                     mkdir plugins/Geyser-Spigot
-                    curl -L https://raw.githubusercontent.com/GeyserMC/Geyser/refs/heads/master/core/src/main/resources/config.yml > plugins/Geyser-Spigot/config.yml
-                    curl -L https://download.geysermc.org/v2/projects/floodgate/versions/latest/builds/latest/downloads/spigot > plugins/Floodgate.jar
-                    curl -L https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/spigot > plugins/geyser-spigot.jar
-                    curl -L https://server.properties/ > server.properties
+                    curl https://raw.githubusercontent.com/GeyserMC/Geyser/refs/heads/master/core/src/main/resources/config.yml -o plugins/Geyser-Spigot/config.yml
+                    curl https://download.geysermc.org/v2/projects/floodgate/versions/latest/builds/latest/downloads/spigot -o plugins/Floodgate.jar
+                    curl https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/spigot -o plugins/geyser-spigot.jar
+                    curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/refs/heads/main/server.properties -o server.properties
                     sed -i s/online/floodgate/g plugins/Geyser-Spigot/config.yml
                     sed -i s/enforce-secure-profile=true/enforce-secure-profile=false/g server.properties
-
-                    java -Xmx1G -jar paper-1.21.8-25.jar
+                    java -Xmx1G -jar purpur.jar
                     cd ..
                     clear
 					echo -e "${green}Main Menu"
