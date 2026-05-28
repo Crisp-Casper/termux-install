@@ -265,7 +265,9 @@ echo -e "${cyan}$MENU${green}"
                     echo -e "${white}"
                     cd $HOME/Minecraft
 					curl https://api.purpurmc.org/v2/purpur/$(curl https://api.purpurmc.org/v2/purpur/ | awk -F'"' '/"current"/ {print $10}')/latest/download -o purpur.jar
-                    java -Xmx1G -jar purpur.jar
+					curl https://download.geysermc.org/v2/projects/floodgate/versions/latest/builds/latest/downloads/spigot -o plugins/Floodgate.jar
+                    curl https://download.geysermc.org/v2/projects/geyser/versions/latest/builds/latest/downloads/spigot -o plugins/geyser-spigot.jar
+                    ./jdk-26.0.1/bin/java -Xmx1G -jar purpur.jar
                     cd ..
                     clear
 					echo -e "${green}Main Menu"
@@ -273,6 +275,8 @@ echo -e "${cyan}$MENU${green}"
                     yes | pkg install openjdk-21 openjdk-17 openjdk-25
                     mkdir Minecraft
                     cd $HOME/Minecraft
+					curl https://download.oracle.com/java/26/latest/jdk-26_linux-x64_bin.tar.gz -o jdk-26_linux-x64_bin.tar.gz
+					tar -zxvf jdk-26_linux-x64_bin.tar.gz
                     curl https://api.purpurmc.org/v2/purpur/$(curl https://api.purpurmc.org/v2/purpur/ | awk -F'"' '/"current"/ {print $10}')/latest/download -o purpur.jar
                     echo eula=true > eula.txt
                     mkdir plugins
@@ -283,7 +287,7 @@ echo -e "${cyan}$MENU${green}"
                     curl https://raw.githubusercontent.com/Crisp-Casper/termux-install/refs/heads/main/server.properties -o server.properties
                     sed -i s/online/floodgate/g plugins/Geyser-Spigot/config.yml
                     sed -i s/enforce-secure-profile=true/enforce-secure-profile=false/g server.properties
-                    java -Xmx1G -jar purpur.jar
+                    ./jdk-26.0.1/bin/java -Xmx1G -jar purpur.jar
                     cd ..
                     clear
 					echo -e "${green}Main Menu"
